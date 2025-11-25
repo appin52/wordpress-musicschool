@@ -1,0 +1,206 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+// ==========================================================================
+// p-header
+// ==========================================================================
+
+.p-header {
+    height: rem(80);
+    text-align: center;
+    background-color: $font-color2;
+    @include sp {
+        height: rem(50);
+    }
+}
+
+.p-header__inner {
+    max-width: rem(940);
+    padding-inline: rem(30);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @include sp {
+        padding-inline: rem(20) 0;
+    }
+}
+
+.p-header__right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.p-header__btn {
+    width: rem(150);
+    height: rem(45);
+    font-size: rem(15);
+    line-height: calc(33 / 15);
+    font-weight: 700;
+    margin-left: rem(10);
+}
+
+// ==========================================================================
+// p-header-logo
+// ==========================================================================
+
+.p-header-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    transition: 0.3s ease;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include sp {
+        column-gap: rem(6);
+    }
+}
+
+.p-header-logo__image {
+    width: rem(32);
+    @include sp {
+        width: rem(21);
+    }
+}
+
+.p-header-logo__image img {
+    display: block;
+    width: 100%;
+}
+
+
+.p-header-logo__text {
+    display: inline-block;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: calc(23 / 20);
+    padding-top: rem(4);
+    text-align: left;
+    @include sp {
+        font-size: rem(13);
+        line-height: calc(14 / 13);
+        padding-top: 0;
+    }
+    span {
+        display: inline-block;
+        font-size: rem(15);
+        @include sp {
+            font-size: rem(13);
+        }
+    }
+}
+
+// ==========================================================================
+// p-header-nav
+// ==========================================================================
+
+.p-header-nav {
+    height: 100%;
+}
+
+.p-header-nav__lists {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: rem(13);
+    @include sp {
+        display: block;
+        width: rem(300);
+        height: rem(174);
+        background-color: $main-color;
+        position: fixed;
+        top: rem(50);
+        right: -120%;
+        transition: all .3s;
+    }
+}
+.p-header-nav__lists.active {
+    right: 0%;
+}
+
+
+.p-header-nav__lists li {
+    height: 100%;
+    @include sp {
+        display: block;
+        height: rem(58);
+    }
+}
+
+.p-header-nav__lists a {
+    height: 100%;
+    display: flex;
+    padding-inline: rem(10);
+    align-items: center;
+    font-size: rem(17);
+    line-height: calc(33 / 17);
+    font-weight: 700;
+    color: $font-color1;
+    position: relative;
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include sp {
+        width: 100%;
+        height: 100%;
+        padding-inline: rem(20);
+        font-size: rem(18);
+        line-height: calc(33 / 18);
+        color: $font-color2;
+        &:hover {
+            background-color: $font-color1;
+            opacity: 1;
+        }
+    }
+}
+
+.p-header-nav__lists li:last-child a {
+    font-size: rem(15);
+}
+
+
+
+
+@include pc {
+    .p-header-nav__list::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: rem(25);
+        width: 0;
+        height: rem(2);
+        background-color: $font-color1;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+    .p-header-nav__list:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+// ==========================================================================
+// ヘッダー調整
+// ==========================================================================
+.p-header-nav__lists {
+  li {
+    &:last-child {
+      height: rem(45);
+      justify-content: center;
+      align-items: center;
+      a {
+        color: #fff;
+        &:hover {
+            color: $main-color;
+        }
+      }
+    }
+  }
+}

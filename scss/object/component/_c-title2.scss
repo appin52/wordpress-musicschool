@@ -1,0 +1,16 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+
+/* --------------
+c-title2(h2)
+-----------------*/
+
+.c-title2 {
+    font-size: rem(25);
+    line-height: calc(40 / 30);
+    font-weight: 600;
+    text-align: center;
+  }

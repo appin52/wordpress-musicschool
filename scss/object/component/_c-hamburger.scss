@@ -1,0 +1,62 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+/* --------------
+ハンバーガーメニュー
+-----------------*/
+
+.c-hamburger {
+  width: rem(71);
+  height: rem(50);
+  background-color: $main-color;
+  position: relative;
+  cursor: pointer;
+  span {
+    display: block;
+    width: rem(33);
+    height: rem(4);
+    background: $font-color2;
+    border-radius: rem(2); 
+    position: absolute;
+    left: rem(19);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+    &:nth-of-type(1) {
+      top: 25%;
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+    }
+    &:nth-of-type(3) {
+      top: 75%;
+    }
+ }
+}
+
+
+.c-hamburger.active span:nth-of-type(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.c-hamburger.active span:nth-of-type(2) {
+  display: none;
+}
+.c-hamburger.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}  
+
+
+// .c-hamburger.active span:nth-of-type(1) {
+//   top: rem(24);
+//   transform: rotate(45deg);
+// }
+// .c-hamburger.active span:nth-of-type(2) {
+//   display: none;
+// }
+// .c-hamburger.active span:nth-of-type(3) {
+//   top: rem(24);
+//   transform: rotate(-45deg);
+// }  

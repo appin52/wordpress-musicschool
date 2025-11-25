@@ -1,0 +1,45 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+/* --------------
+トップへ戻るボタン
+-----------------*/
+
+.c-back-btn {
+      //-----セットで使用し非表示
+    opacity: 0; 
+    visibility: hidden;
+    // --------------------
+    display: flex;
+    width: rem(68);
+    height: rem(68);
+    background-color: rgba(0, 0, 0, 0.502);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    right: rem(116);
+    z-index: 999;
+    cursor: pointer;
+    transition: opacity .5s ease;
+    // transition: opacity .5s, visibility .5s ;
+    @include sp {
+        right: rem(20);
+    }
+     /* ホバー時のフェード */
+    &:hover {
+     opacity: 0.7 !important;
+    }
+}
+
+.c-back-btn.active {
+ //-----セットで使用し表示
+    opacity: 1;
+    visibility: visible;
+ }
+
+.c-back-btn__icon {
+    width: rem(27);
+}
+

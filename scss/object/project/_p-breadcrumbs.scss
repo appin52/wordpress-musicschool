@@ -1,0 +1,103 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-breadcrumbs
+// ==========================================================================
+
+.p-breadcrumbs {
+    background-color: #e8e8e8;
+}
+
+.p-breadcrumbs__list {
+    width: 100%;
+    height: rem(50);
+    @include sp {
+        height: rem(36);
+        overflow-x: auto;    /* 横スクロール有効化 */
+        /* スクロールバー非表示設定 */
+        -ms-overflow-style: none;  /* IE・Edge */
+        scrollbar-width: none;     /* Firefox */
+        &::-webkit-scrollbar {     /* Chrome, Safari, Opera */
+        display: none;
+        }
+    }
+}
+
+.p-breadcrumbs__list ul {
+    width: 100%;
+    max-width: rem(880);
+    display: flex;
+    height: 100%;
+    flex-wrap: nowrap;            // 折り返さない
+    white-space: nowrap;          // テキストも折り返さない
+    column-gap: rem(20);
+    align-items: center;
+    margin: 0 auto;
+    @include sp {
+        width: auto;
+        max-width: none;
+        display: inline-flex;
+    }
+}
+
+.p-breadcrumbs__list li {
+    display: flex;
+    align-items: center; 
+    height: 100%;
+    min-width: 0;
+    flex-shrink: 0;    /* アイテムを縮めない */
+    /* 最後の項目だけは縮める */
+    &:last-child {
+        flex-shrink: 1;
+        @include sp {
+            flex-shrink: 0;
+        }
+    }
+}
+
+.p-breadcrumbs__list a {
+    transition: all .3s;
+    &:hover {
+    opacity: 0.5;
+    }
+}
+
+.p-breadcrumbs__link {
+    height: 100%;
+    font-size: rem(16);
+    line-height: 1;
+    align-items: center;
+    display: flex;           // ブロックレベルにして幅指定を反映
+    overflow: hidden;         // はみ出しを隠す
+    text-overflow: ellipsis;  // 省略記号
+    white-space: nowrap;      // 改行させない
+    max-width: 100%;          // li の幅いっぱいまで
+    transition: all .3s;
+    &:hover {
+    opacity: 0.5;
+    }
+    @include sp {
+        padding-block: 0;
+        line-height: calc(33 / 16);
+        overflow: visible;   /* はみ出しを隠さない */
+        text-overflow: clip; /* 省略しない */
+    }
+}
+
+.p-breadcrumbs__item {
+    font-size: rem(16);
+    line-height: 1;
+    display: block;           // ブロックレベルにして幅指定を反映
+    overflow: hidden;         // はみ出しを隠す
+    text-overflow: ellipsis;  // 省略記号
+    white-space: nowrap;      // 改行させない
+    max-width: 100%;          // li の幅いっぱいまで
+    @include sp {
+        padding-block: 0;
+        line-height: calc(33 / 16);
+        overflow: visible;   /* はみ出しを隠さない */
+        text-overflow: clip; /* 省略しない */
+    }
+}

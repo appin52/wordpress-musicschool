@@ -1,0 +1,68 @@
+@use '../foundation/variable' as *;
+@use '../foundation/function' as *; 
+@use '../foundation/mixin' as *;
+
+html {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    -webkit-text-seize-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    @include sp {
+        html {
+          scroll-padding-top: 5rem;
+        }
+    }
+  }
+
+
+
+// フォントサイズ
+html {
+ //375px~767px
+  font-size: 16px;
+  //768~940px
+   @include pc {
+    font-size: calc(16 / 940 * 100vw);
+  }
+  //940px~
+  @media (min-width: 940px) {
+    font-size: 16px;
+  }
+  @media (max-width: 375px) {
+    font-size: calc(16 / 375 * 100vw);
+  }
+}
+  
+
+  body {
+      margin: 0;
+      font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
+      // font-size: 1.6rem;
+      font-weight: 500;
+      font-style: normal;
+      text-decoration: none;
+      color: #000;
+  }
+  
+  #container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  p, h1, h2, h3, a {
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  

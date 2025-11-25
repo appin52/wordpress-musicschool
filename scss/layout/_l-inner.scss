@@ -1,0 +1,12 @@
+@use '../foundation/variable' as *;
+@use '../foundation/function' as *; 
+@use '../foundation/mixin' as *;
+
+.l-inner {
+    max-width: rem(940);
+    padding-inline: rem(30);
+    margin: 0 auto;
+    @include sp {
+        padding-inline: rem(20);
+    }
+}

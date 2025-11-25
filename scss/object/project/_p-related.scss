@@ -1,0 +1,121 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-related
+// ==========================================================================
+.p-related {
+    margin-top: rem(100);
+    @include sp {
+        margin-top: rem(62);
+    }
+}
+
+.p-related__label {
+    background-color: $font-color1;
+    color: $font-color2;
+    font-size: rem(18);
+    font-weight: 600;
+    line-height: calc(33 / 18);
+    padding: rem(9) 0 rem(8) rem(30);
+    text-align: left;
+    @include sp {
+        text-align: center;
+        padding: rem(10) 0 rem(7) 0;
+    }
+}
+
+.p-related__list {
+    margin-top: rem(30);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    @include sp {
+        margin-top: rem(20);
+        row-gap: rem(20);
+    }
+}
+
+.p-related__wrap {
+    width: 100%;
+    display: flex;
+    column-gap: rem(30);
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sp {
+        column-gap: rem(20);
+    }
+}
+
+.p-related__right {
+    width: 29.5%;
+    @include sp {
+        width: 47.7%;
+    }
+}
+
+.p-related__image {
+    width: 100%;
+}
+
+.p-related__image img {
+    aspect-ratio: 260 / 183;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 160 / 110;
+    }
+}
+
+.p-related__category {
+    min-width: 38.4%;
+    @include sp {
+        min-width: rem(80);
+    }
+}
+
+.p-related__textarea {
+    flex: 1;
+}
+
+.p-related__title {
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+    font-weight: 600;
+    // 3行以上は省略
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    @include sp {
+        font-size: rem(17);
+        line-height: calc(28 / 17);
+        // 2行以上は省略
+        -webkit-line-clamp: 2;
+    }
+}
+
+.p-related__time {
+    display: inline-block;
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    margin-top: rem(13);
+    padding-left: rem(4);
+    @include sp {
+        margin-top: rem(3);
+        padding-left: 0;
+    }
+}
+
+.p-list-item__article {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    margin-top: rem(11);
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+        margin-top: rem(8);
+    }
+}

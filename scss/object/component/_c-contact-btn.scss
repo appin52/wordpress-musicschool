@@ -1,0 +1,38 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+/* --------------
+お問い合わせボタン
+-----------------*/
+
+// .c-contact-btn {
+//     width: rem(300);
+//     height: rem(60);
+//     font-size: rem(20);
+//     font-weight: 600;
+//     line-height: 1.65;
+//     padding-top: rem(6);
+//     margin-bottom: rem(-1);
+//     letter-spacing: 0.15em;
+//     z-index: 999;
+//     position: absolute;
+//     bottom: 28.2rem;
+//     right: 0;
+//     transition:
+//     background-color 0.5s ease, // ← 色はゆっくり
+//     color 0.5s ease !important; // ← 同じくゆっくり
+//     &:hover {
+//      color: $main-color;
+//      background-color: $font-color2;
+//     }
+//     @include sp {
+//         left: 50%      !important;
+//         right: auto    !important;
+//         transform: translateX(-50%) !important;
+//         padding: rem(12) rem(101) rem(12) rem(98);
+//         bottom: rem(304);
+//         width: rem(335);
+//         white-space: nowrap;
+//     }
+// }

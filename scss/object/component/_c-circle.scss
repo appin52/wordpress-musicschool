@@ -1,0 +1,22 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+/* --------------
+c-circle
+-----------------*/
+
+.c-circle {
+    display: inline-block;
+    width: rem(15);
+    height: rem(15);
+    border-radius: 50%;
+}
+
+.c-circle__black {
+    background-color: $font-color1;
+}
+
+.c-circle__red {
+    background-color: $main-color;
+}

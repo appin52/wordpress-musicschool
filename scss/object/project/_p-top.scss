@@ -1,0 +1,813 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+// ==========================================================================
+// p-top-fv
+// ==========================================================================
+
+.p-top-fv {
+    margin-top: rem(80);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include sp {
+        margin-top: rem(50);
+    }
+}
+
+.p-top-fv__bg {
+    width: 100%;
+    position: relative;
+}
+
+.p-top-fv__bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80, 80, 0.502);
+    z-index: 9;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.p-top-fv__message {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    @include sp {
+        top: 51.5%;
+    }
+}
+.p-top-fv__title {
+    color: $font-color2;
+    font-size: rem(40);
+    line-height: calc(60 / 40);
+    font-weight: 600;
+    text-align: center;
+    @include sp {
+        font-size: rem(30);
+        line-height: calc(50 / 30);
+    }
+}
+
+// ==========================================================================
+// p-top-concept
+// ==========================================================================
+
+.p-top-concept {
+    padding-block: rem(66) rem(47);
+    background-color: $font-color2;
+    @include sp {
+        padding-block: rem(46) rem(28) ;
+    }
+}
+
+.p-top-concept__title {
+    font-size: rem(35);
+    line-height: calc(50 / 35);
+    color: $main-color;
+    font-weight: 600;
+    text-align: center;
+    @include sp {
+        font-size: rem(25);
+        line-height: calc(40 / 25);
+    }
+}
+
+.p-top-concept__message {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    text-align: center;
+    margin-block:rem(17) rem(34);
+    @include sp {
+        font-size: rem(18);
+        margin-block: rem(7) rem(20);
+    }
+}
+
+.p-top-concept__image {
+    width: rem(858);
+    margin: 0 auto;
+    @include sp {
+        width: 100%;
+    }
+}
+
+// ==========================================================================
+// p-concept-flow
+// ==========================================================================
+
+.p-concept-flow {
+    width: 100%;
+    margin-top: rem(12);
+    @include sp {
+        margin-top: rem(25);
+        padding-right: rem(5);
+    }
+}
+
+// ==========================================================================
+// p-flow-card
+// ==========================================================================
+
+.p-flow-card {
+    width: 100%;
+    padding-block: rem(8.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sp {
+        padding-block: rem(8.5);
+    }
+}
+
+.p-flow-card__en {
+    width: rem(150);
+    font-size: rem(25);
+    line-height: calc(50 / 25);
+    font-weight: 600;
+    color: $main-color;
+    text-align: right;
+    @include sp {
+        width: rem(120);
+        font-size: rem(20);
+        line-height: calc(50 / 20);
+    }
+}
+
+.p-flow-card__circle {
+    background-color: $main-color;
+    width: rem(20);
+    height: rem(20);
+    border-radius: 50%;
+    margin-inline: rem(30);
+    position: relative;
+}
+
+.p-flow-card__ja {
+    width: rem(150);
+    font-size: rem(23);
+    line-height: calc(50 / 23);
+    text-align: left;
+    @include sp {
+        width: rem(110);
+        font-size: rem(20);
+        line-height: calc(50 / 20);
+    }
+}
+
+
+// 矢印
+
+.p-flow-card:first-of-type {
+    .p-flow-card__circle {
+      &::before {
+        content: "";
+        position: absolute;
+        width: rem(24);
+        height: rem(24);
+        border-top: rem(3) solid #CB0000;
+        border-left: rem(3) solid #CB0000;
+        top: -200%;
+        left: -10%;
+        transform:rotate(45deg);
+      }
+    }
+}
+
+.p-flow-card:last-of-type {
+    .p-flow-card__circle {
+        &::after {
+            content: "";
+            position: absolute;
+            width: rem(3);
+            height: rem(194);
+            background-color: #CB0000;
+            top: -880%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+// ==========================================================================
+// p-top-message
+// ==========================================================================
+
+.p-top-message {
+    padding-block: rem(68) rem(60);
+    background-color: $main-color;
+    @include sp {
+        padding-block: rem(49) rem(40);
+    }
+}
+
+.p-top-message__title {
+    color: $font-color2;
+}
+
+.p-top-message__text {
+    margin-top: rem(30);
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    color: $font-color2;
+    text-align: center;
+    @include sp {
+        margin-top: rem(14);
+    }
+}
+
+// ==========================================================================
+// p-top-reason
+// ==========================================================================
+
+.p-top-reason {
+    padding-block: rem(64) rem(90);
+    @include sp {
+        padding-block: rem(49) rem(39);
+    }
+}
+
+.p-top-reason__items {
+    display: grid;
+    margin-top: rem(28);
+    row-gap: rem(50);
+    @include sp {
+        margin-top: rem(36);
+        row-gap: rem(39);
+    }
+}
+
+// ==========================================================================
+// p-top-reason
+// ==========================================================================
+
+.p-reason-card {
+    display: flex;
+    width: 100%;
+    @include sp {
+        display: block;
+    }
+}
+
+.p-reason-card__image {
+    width: rem(350);
+    @include sp {
+        width: 100%;
+    }
+}
+
+.p-reason-card__body {
+    flex: 1;
+    @include sp {
+        width: 100%;
+    }
+}
+
+.p-reason-card__title {
+    padding-left: rem(50);
+    padding-bottom: rem(7);
+    font-size: rem(22);
+    line-height: calc(33 / 22);
+    font-weight: 600;
+    border-bottom: 2px solid $main-color;
+    @include sp {
+        padding-left: 0;
+        padding-top: rem(30);
+        padding-bottom: rem(8);
+        font-size: rem(20);
+        line-height: calc(30 / 20);
+    }
+}
+
+.p-reason-card__text {
+    padding-left: rem(50);
+    padding-top: rem(37);
+    font-size: rem(18);
+    line-height: calc(33 / 18);
+    @include sp {
+        padding-left: 0;
+        padding-top: rem(17);
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+    }
+}
+
+// ==========================================================================
+// p-top-voice
+// ==========================================================================
+
+.p-top-voice {
+    padding-block: rem(44) rem(80);
+    background-color: $main-color;
+    @include sp {
+        padding-block: rem(45) rem(50);
+    }
+}
+
+.p-top-voice__inner {
+    position: relative;
+    width: rem(975);
+    @include sp {
+        padding-inline: rem(20);
+        width: 100%;
+    }
+}
+
+.p-top-voice__title {
+    color: $font-color2;
+}
+
+// ==========================================================================
+// p-voice-slider
+// ==========================================================================
+.p-voice-slider {
+    margin-top: rem(36);
+    width: 100%;
+    overflow: hidden;
+    @include sp {
+       margin-top: rem(39);
+    }
+}
+
+.p-voice-slider__cards {
+    width: rem(915);
+    width: 100%;
+    @include sp {
+        width: 100%;
+    }
+}
+
+// ==========================================================================
+// p-slider-card
+// ==========================================================================
+
+.p-slider-card {
+    width: rem(270);
+    margin-right: rem(35);
+    @include sp {
+        width: 100%;
+        margin-right: 0;
+    }
+    &:hover {
+        .p-slider-card__img img {
+            transform: scale(1.05);
+        }
+        .p-slider-card__name,
+        .p-slider-card__comment {
+            opacity: 0.7;
+        }
+    }
+}
+
+.p-slider-card__img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.p-slider-card__img img {
+    width: 100%;
+    transition: transform 0.3s ease;
+    aspect-ratio: 270 / 190;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 335 / 200;
+    }
+}
+
+.p-slider-card__name {
+    padding-top: rem(17);
+    font-size: rem(22);
+    line-height: calc(33 / 22);
+    font-weight: 600;
+    text-align: center;
+    color: $font-color2;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include sp {
+        padding-top: rem(27);
+    }
+}
+
+.p-slider-card__comment {
+    padding-top: rem(10);
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: $font-color2;
+    transition: 0.3s ease;
+    @include sp {
+        letter-spacing: 0;
+    }
+}
+
+
+
+// ==========================================================================
+// .swiper-button 矢印
+// ==========================================================================
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 54%;
+    z-index: 300;
+    width: rem(29);
+    height: rem(40);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Swiperデフォルトの矢印（疑似要素）を非表示
+    &::after {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: opacity 0.3s ease;
+    }
+    &:hover img {
+      opacity: 0.7;
+    }
+    @include sp {
+        top: 52%;
+        width: rem(30);
+    }
+  }
+
+  // 右矢印
+  .swiper-button-next {
+    right: rem(-12);
+    @include sp {
+      right: rem(20);
+    }
+  }
+
+  // 左矢印
+  .swiper-button-prev {
+    left: rem(-12);
+    @include sp {
+      left: rem(20);
+    }
+  }
+
+
+
+
+// ==========================================================================
+// p-top-process
+// ==========================================================================
+
+.p-top-process {
+    padding-block: rem(34) rem(42);
+    @include sp {
+        padding-block: rem(46) rem(25);
+    }
+}
+
+.p-top-process__lists {
+    margin-top: rem(53);
+    padding-left: rem(50);
+    padding-bottom: rem(16);
+    position: relative;
+    @include sp {
+        margin-top: rem(36);
+        padding-left: rem(8);
+        padding-bottom: rem(0);
+    }
+}
+
+.p-top-process__lists::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: rem(25);
+    bottom: rem(-3);
+    left: rem(60);
+    translate: -50%;
+    width: rem(3);
+    background-color: $main-color;
+    @include sp {
+        top: rem(20);
+        left: rem(18);
+        bottom: rem(10);
+    }
+}
+
+.p-top-process__lists::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: rem(60);
+    bottom: rem(-5);
+    transform-origin: left bottom;
+    rotate: -45deg;
+    width: rem(24);
+    height: rem(24);
+    border-left: rem(3) solid $main-color;
+    border-bottom: rem(3) solid $main-color;
+    @include sp {
+        left: rem(18);
+        bottom: rem(8);
+    }
+}
+
+// ==========================================================================
+// p-process-list
+// ==========================================================================
+
+.p-process-list {
+    display: flex;
+    align-items: flex-start;
+    column-gap: rem(38);
+    position: relative;
+    @include sp {
+        display: block;
+        column-gap: rem(0);
+    }
+}
+
+.p-process-list:nth-of-type(n + 2) {
+    margin-top: rem(58);
+    @include sp {
+        margin-top: rem(36);
+    }
+}
+
+.p-process-list__title {
+    display: flex;
+    width: rem(224);
+    font-size: rem(22);
+    line-height: calc(33 / 22);
+    color: $main-color;
+    font-weight: 600;
+    gap: rem(50);
+    @include sp {
+        margin-top: rem(5);
+        gap: rem(20);
+    }
+}
+
+.p-process-list__title::before {
+    content: "";
+    width: rem(20);
+    height: rem(20);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $main-color;
+    align-self: center;
+}
+
+.p-process-list__text {
+    flex: 1;
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    font-weight: 500;
+    @include sp {
+        padding-left: rem(40);
+        margin-top: rem(9);
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+    }
+}
+
+
+
+// ==========================================================================
+// p-top-qa
+// ==========================================================================
+
+.p-top-qa {
+    padding-block: rem(50);
+    @include sp {
+        padding-block: rem(30) rem(20);
+    }
+}
+
+.p-top-qa__lists {
+    margin-top: rem(36);
+    width: 100%;
+    border-top: 0.5px solid $font-color1;
+    @include sp {
+        margin-top: rem(38);
+    }
+}
+
+// ==========================================================================
+// p-qa-list
+// ==========================================================================
+
+.p-qa-list {
+    border-bottom: 0.5px solid $font-color1;
+}
+
+.p-qa-list__q::after {
+    content: '';
+    position: absolute;
+    right: rem(30);
+    top: 48%;
+    transform: translateY(-50%) rotate(45deg);
+    width: rem(13);
+    height: rem(13);
+    border-right: 0.1rem solid #000;
+    border-bottom: 0.1rem solid #000;
+    transform-origin: center;
+    /* 鋭角に見せるために横幅を縮める */
+    scale: 0.8 1.1;
+    transition: transform 0.4s ease;
+    @include sp {
+    right: rem(15);
+    top: 50%;
+    }   
+}
+
+.p-qa-list__q.active::after {
+    transform: translateY(-20%) rotate(225deg);
+}
+
+.p-qa-list__q {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-block: rem(15);
+    cursor: pointer;
+    @include sp {
+        padding-block: rem(17) rem(9);
+    }
+}
+
+.p-qa-list__a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-block: rem(15);
+    background-color: rgba(203, 0, 0, 0.098);
+    cursor: pointer;
+    @include sp {
+        padding-block: rem(17) rem(9);
+    }
+}
+
+.p-qa-list__circle {
+    color: $font-color2;
+    font-size: rem(20);
+    line-height: calc(30 / 20);
+    width: rem(35);
+    height: rem(35);
+    border-radius: 50%;
+    margin-left: rem(19.5);
+    padding-top: rem(2);
+    @include sp {
+        margin-left: rem(0);
+        align-self: center;
+    }
+}
+
+.p-qa-list-circle__q {
+    background-color: $font-color1;
+}
+
+.p-qa-list-circle__a {
+    background-color: $main-color;
+}
+
+.p-qa-list__text {
+    text-align: left;
+    padding-left: rem(10);
+    padding-right: rem(60);
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    font-weight: 500;
+    flex: 1;
+    @include sp {
+        padding-left: rem(20);
+        padding-right: rem(48);
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+    }
+}
+
+.p-qa-list__text-a {
+    color: $main-color;
+    font-weight: 600;
+}
+
+// ==========================================================================
+// p-top-blog
+// ==========================================================================
+
+.p-top-blog {
+    padding-block: rem(17) rem(210);
+    @include sp {
+        padding-block: rem(24) rem(196);
+    }
+}
+
+.p-top-blog__lists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3列に分割
+    margin-top: rem(35);
+    width: 100%;
+    gap: 5.7%;
+    @include sp {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: rem(39);
+        gap: rem(41);
+    }
+}
+
+.p-top-blog__more {
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+    margin-top: rem(43);
+    @include sp {
+        justify-content: center;
+    }
+}
+
+.p-top-blog__link {
+    font-size: rem(18);
+    line-height: calc(18 / 18);
+    border-bottom: 0.05rem solid;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+    opacity: 0.7;
+    }
+
+}
+
+// ==========================================================================
+// p-blog-card
+// ==========================================================================
+
+.p-blog-card {
+    // width: rem(260);
+    width: 100%;
+    min-width: 0;
+    transition: 0.3s;
+    position: relative;
+    transition: all .4s;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.p-blog-card__image {
+    width: 100%;
+}
+
+.p-blog-card__image img {
+    aspect-ratio: 260 / 200;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 335 / 200;
+    }
+}
+
+.p-blog-card__title {
+    margin-top: rem(20);
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+    font-weight: 600;
+    @include sp {
+        margin-top: rem(30);
+        line-height: calc((30 /20));
+    }
+}
+
+.p-blog-card__date {
+    display: block;
+    margin-top: rem(11);
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    text-align: right;
+    @include sp {
+        margin-top: rem(6);
+    }
+}
+
+.p-blog-card__category {
+    padding-block: rem(2.5);
+    min-width: rem(80);
+    @include sp {
+        min-width: rem(90);
+    }
+}

@@ -1,0 +1,249 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-contact-form
+// ==========================================================================
+
+.p-contact-form__area {
+    padding-block: rem(68) rem(100);
+    @include sp {
+        padding-block: rem(47) rem(108);
+    }
+}
+
+.p-contact-form__text {
+    width: 100%;
+    text-align: center;
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    @include sp {
+        text-align: left;
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+    }
+}
+
+.p-contact-form__block {
+    margin-top: rem(64);
+    width: 100%;
+    @include sp {
+        margin-top: rem(32);
+    }
+}
+
+// ==========================================================================
+// p-form
+// ==========================================================================
+
+.p-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    @include sp {
+        row-gap: rem(13);
+    }
+}
+
+.p-form__group {
+    display: flex;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.p-form__group dt {
+    width: rem(170);
+}
+
+.p-form__group dd {
+    flex: 1;
+}
+
+.p-form__label {
+    display: flex;
+    font-size: rem(20);
+    line-height: calc(33 / 20);
+    font-weight: 500;
+    padding-top: rem(7);
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(33 / 16);
+        padding-top: 0;
+        padding-bottom: rem(2);
+    }
+}
+
+.p-form__control {
+    width: 100%;
+    height: rem(40);
+    border: solid rem(0.5) $font-color1;
+    font-size: rem(15);
+    line-height: calc(33 / 15);
+    padding: rem(3) rem(20);
+}
+
+.p-form__check {
+    line-height: calc(30 / 20);
+    padding-top: 0;
+    @include sp {
+        line-height: calc(33 / 16);
+    }
+}
+
+.p-form__checkboxes {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: rem(21);
+    .wpcf7-list-item {
+    margin: 0;
+  }
+  
+  .wpcf7-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(21);
+}
+label {
+    cursor: pointer;
+    
+    input[type="checkbox"] {
+      display: none;
+            
+      &+span {
+        display: inline-block;
+        padding-left: rem(40);
+        position: relative;
+        
+        @include sp {
+          padding-left: rem(30);
+        }
+              
+        &::before {
+          content: "";
+          width: rem(20);
+          height: rem(20);
+          border: rem(0.5) solid #000;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+              
+        &::after {
+          content: "";
+          width: rem(16);
+          height: rem(8);
+          border-left: rem(4) solid #000;
+          border-bottom: rem(2) solid #000;
+          position: absolute;
+          top: 50%;
+          left: rem(2);
+          transform: translateY(calc(-50% - rem(2))) rotate(-50deg);
+          display: none;
+        }
+    } 
+      &:checked {
+        &+span {
+          &::after {
+            display: block;
+          }
+        }
+      }
+    }
+}
+}
+
+.p-form__textarea {
+  box-sizing: border-box;
+    width: 100%;
+    background-color: $font-color2;
+    min-height: rem(300);
+    height: rem(300);
+    overflow-y: auto;
+    resize: vertical;
+    padding: rem(13) rem(20);
+    font-size: rem(15);
+    line-height: calc(33 / 15);
+    border: solid rem(0.5) $font-color1;
+    @include sp {
+        min-height: rem(190);
+        height: rem(190);
+        line-height: calc(25 / 15);
+    }
+}
+
+.p-form__submit {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(20);
+    @include sp {
+      margin-top: rem(37);
+    }
+}
+
+.p-form__btn {
+    width: rem(250);
+    height: rem(50);
+    font-size: rem(25);
+    line-height: calc(33 / 25);
+    color: $font-color2; 
+    background-color: $main-color;
+    border: $main-color solid;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+     color: $main-color;
+     background-color: $font-color2;
+    }
+    @include sp {
+        width: rem(335);
+        font-size: rem(20);
+        line-height: calc(26 / 20);
+    }
+}
+
+// ==========================================================================
+// p-form
+// ==========================================================================
+
+
+
+.wpcf7-not-valid-tip {
+  margin-top: 6px;
+  color: $main-color;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border: none;
+  font-size: rem(18);
+  text-align: center;
+  color: $main-color;
+  @include sp {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border: none;
+  font-size: rem(18);
+  text-align: center;
+  color: $main-color;
+  @include sp {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.wpcf7-spinner {
+  display: none;
+}

@@ -1,0 +1,15 @@
+@use '../foundation/variable' as *;
+@use '../foundation/function' as *; 
+@use '../foundation/mixin' as *;
+
+
+.l-header {
+    width: 100%;
+    position: fixed; /* ヘッダーを固定 */
+    // top: 0; /* 上部に配置 */
+    z-index: 999; /* 表示順序を設定 */
+}
+
+.l-header__logo {
+  margin: 0;
+}

@@ -1,0 +1,122 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-list-section
+// ==========================================================================
+
+.p-list-section {
+    padding-block: rem(71) rem(208);
+    @include sp {
+        padding-block: rem(50) rem(203);
+    }
+}
+
+.p-list-section__items {
+    margin-top: rem(40);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(70);
+    @include sp {
+        margin-top: rem(42);
+        row-gap: rem(39);
+    }
+}
+
+// ==========================================================================
+// p-list-item
+// ==========================================================================
+
+.p-list-item {
+    transition: all 0.3s ease;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.p-list-item__wrap {
+    width: 100%;
+    display: flex;
+    column-gap: rem(50);
+    transition: all 0.5s ease;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include sp {
+        flex-direction: column;
+        row-gap: rem(30);
+    }
+}
+
+.p-list-item__right {
+    position: relative;
+    width: rem(260);
+    @include sp {
+        width: 100%;
+    }
+}
+
+.p-list-item__image {
+    width: rem(260); 
+    @include sp {
+        width: 100%;
+    }
+}
+
+.p-list-item__image img {
+    aspect-ratio: 260 / 184;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 335 / 200;
+    }
+}
+
+.p-list-item__textarea {
+    flex: 1;
+}
+
+.p-list-item__category {
+    min-width: rem(80);
+    @include sp {
+       min-width: rem(90);
+    }
+}
+
+.p-list-item__title {
+    font-size: rem(20);
+    line-height: calc(25 / 20);
+    font-weight: 600;
+    margin-bottom: rem(3);
+    @include sp {
+        line-height: calc(30 / 20);
+    }
+}
+
+.p-list-item__time {
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    @include sp {
+        margin-top: rem(6);
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.p-list-item__article {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+    margin-top: rem(11);
+    // ３行以上は省略
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    @include sp {
+        font-size: rem(16);
+        line-height: calc(30 / 16);
+        margin-top: rem(8);
+        -webkit-line-clamp: 5;
+    }
+}

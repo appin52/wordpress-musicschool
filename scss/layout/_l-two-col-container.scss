@@ -1,0 +1,25 @@
+@use '../foundation/variable' as *;
+@use '../foundation/function' as *; 
+@use '../foundation/mixin' as *;
+
+// ==========================================================================
+// l-two-col-container
+// ==========================================================================
+
+.l-two-col-container {
+  display: grid;
+  grid-template-columns: 1fr rem(250);
+  column-gap: rem(30);
+  padding-block: rem(70) rem(186);
+  @include sp {
+    grid-template-columns: 1fr;
+    row-gap: rem(28);
+    padding-block: rem(52) rem(197);
+  }
+}
+
+.l-two-col-container__side {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+}

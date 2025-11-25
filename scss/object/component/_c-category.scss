@@ -1,0 +1,26 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+/* --------------
+キャプション
+-----------------*/
+
+.c-category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: rem(30);
+  padding-inline: rem(10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-color;
+  color: $font-color2;
+  font-size: rem(15);
+  line-height: calc(25 / 15);
+  font-weight: 600;
+  z-index: 99;
+}
+
+

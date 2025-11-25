@@ -1,0 +1,10 @@
+@use 'sass:math';
+@use '../foundation/variable' as *; 
+@use '../foundation/mixin' as *;
+
+
+/* リキッドレイアウト */
+
+@function rem($pixels) {
+    @return math.div($pixels, 16) * 1rem;
+  }

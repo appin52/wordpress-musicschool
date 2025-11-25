@@ -1,0 +1,64 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-fv-lower
+// ==========================================================================
+
+.p-fv-lower {
+    margin-top: rem(80);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    @include sp {
+        margin-top: rem(50);
+    }
+}
+
+.p-fv-lower__bg {
+    width: 100%;
+    position: relative;
+}
+
+.p-fv-lower__bg img {
+    aspect-ratio: 1080 / 200;
+    object-fit: cover;
+    @include sp {
+        aspect-ratio: 375 / 300;
+    }
+}
+
+.p-fv-lower__bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(80, 80, 80, 0.502);
+    z-index: 9;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.p-fv-lower__title {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    @include sp {
+        top: 51.5%;
+    }
+}
+.p-fv-lower__title h1 {
+    color: $font-color2;
+    font-size: rem(25);
+    line-height: calc(60 / 25);
+    font-weight: 600;
+    text-align: center;
+    @include sp {
+    }
+}

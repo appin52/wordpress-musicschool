@@ -1,0 +1,23 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+
+
+/* --------------
+c-side-title
+-----------------*/
+
+.c-side-title {
+  height: rem(50);
+  background: $font-color1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: $font-color2;
+    font-size: rem(18);
+    line-height: 1;
+    font-weight: 600;
+  }
+}

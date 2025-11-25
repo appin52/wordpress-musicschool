@@ -1,0 +1,368 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+// ==========================================================================
+// p-blog-details
+// ==========================================================================
+
+.p-blog-details {
+    margin-top: rem(80);
+    @include sp {
+        margin-top: rem(50);
+    }
+}
+
+.p-blog-details__imgarea {
+    position: relative;
+}
+
+.p-blog-details__image {
+    width: 100%;
+}
+
+.p-blog-details__image img {
+  aspect-ratio: 600 / 350;
+  object-fit: cover;
+  @include sp {
+    aspect-ratio: 335 / 200;
+  }
+}
+
+.p-blog-details__category {
+    min-width: rem(80);
+    @include sp {
+      min-width: rem(90);
+    }
+}
+
+.p-blog-details__title {
+    margin-top: rem(46);
+    font-size: rem(25);
+    line-height: calc(40 / 25);
+    font-weight: 600;
+    @include sp {
+        margin-top: rem(30);
+        font-size: rem(20);
+        line-height: calc(30 / 20);
+    }
+}
+
+.p-blog-details__time {
+    display: inline-block;
+    margin-top: rem(5);
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    @include sp {
+        margin-top: rem(6);
+    }
+}
+
+.p-blog-details__contents {
+  margin-top: rem(48);
+  @include sp {
+    margin-top: rem(27);
+  }
+}
+
+// ==========================================================================
+// p-blog-body
+// ==========================================================================
+
+
+.p-blog-body p {
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+  @include sp {
+    font-size: rem(16);
+    line-height: calc(30 / 16);
+  }
+}
+
+.p-blog-body h2 {
+  margin-block: rem(33) rem(15);
+  font-size: rem(20);
+  line-height: calc(40 / 20);
+  font-weight: 600;
+  @include sp {
+    margin-block: rem(39) rem(17);
+    line-height: calc(30 / 20);
+  }
+}
+
+.p-blog-body figure {
+  margin-top: rem(17);
+  width: rem(335);
+  @include sp {
+    margin-top: rem(70);
+    width: 100%;
+  }
+}
+
+
+.p-blog-body ul,ol {
+  margin-top: rem(28);
+}
+
+.p-blog-body li {
+  font-size: rem(18);
+  line-height: calc(30 / 18);
+  @include sp {
+    font-size: rem(16);
+    line-height: calc(30 /16);
+  }
+}
+
+.p-blog-body hr {
+  display: block;
+  background-color: $font-color1;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-block: rem(42) rem(43);
+  @include sp {
+    margin-block: rem(37) rem(50);
+  }
+}
+
+.p-blog-body h3 {
+  font-size: rem(20);
+  line-height: calc(40 / 20);
+  font-weight: 600;
+  padding-left: rem(11);
+  position: relative;
+  @include sp {
+    line-height: calc(30 / 20);
+  }
+}
+
+.p-blog-body h3::before {
+  content: "";
+  width: rem(3);
+  height: rem(50);
+  height: calc(100% - rem(20));
+  background-color: $font-color1;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  @include sp {
+     height: calc(100% - rem(10));
+  }
+}
+
+.p-blog-body blockquote {
+  display: flex;
+  column-gap: rem(8);
+  padding: rem(18) rem(30) rem(10);
+  background-color: #e8e8e8;
+  margin-block: rem(17) rem(27);
+  border: none;
+  @include sp {
+    column-gap: rem(17);
+    padding: rem(18) rem(20) rem(11) rem(25);
+    margin-block: rem(19) rem(28);
+  }
+   &::before {
+    content: "";
+    background: url(../images/blog-details/icon-blockquote.svg) top center / contain no-repeat;
+    display: inline-block;
+    width: rem(27);
+  }
+  p {
+    flex: 1;
+  }
+}
+
+.p-blog-body a {
+  font-size: rem(20);
+  line-height: calc(33 / 20);
+  color: $main-color;
+  margin-top: rem(18);
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  &:hover {
+      opacity: 0.5;
+  }
+}
+
+
+// ==========================================================================
+// p-sns-share
+// ==========================================================================
+
+.p-sns-share {
+  margin-top: rem(20);
+  display: flex;
+  column-gap: rem(4);
+  @include sp {
+    column-gap: rem(3);
+  }
+}
+
+.p-sns-share__item {
+  width: rem(105);
+  height: rem(40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: rem(10);
+  font-weight: bold;
+  color: $font-color2;
+  transition: all 0.3s ease;
+  &:hover {
+      opacity: 0.7;
+  }
+  @include sp {
+    width: initial;
+    flex: 1;
+  }
+}
+
+.p-sns-share__name {
+  font-size: rem(10);
+  line-height: calc(33 / 10);
+}
+
+// / ==========================================================================
+// p-facebook
+// ==========================================================================
+
+.p-facebook {
+  background-color: rgb(66, 88, 147);
+}
+
+.p-facebook__icon {
+  width: rem(11.1);
+}
+
+// / ==========================================================================
+// p-twitter
+// ==========================================================================
+
+.p-twitter {
+  background-color: rgb(74, 159, 235);
+  @include pc {
+    width: rem(88);
+  }
+}
+
+.p-twitter__icon {
+  width: rem(20.9);
+}
+
+// ==========================================================================
+// p-hatena
+// ==========================================================================
+
+.p-hatena {
+  background-color: rgb(78, 172, 213);
+  @include pc {
+    width: rem(93);
+  }
+}
+
+.p-hatena__icon {
+  width: rem(16.9);
+}
+
+// ==========================================================================
+// p-line
+// ==========================================================================
+
+.p-line {
+  background-color: rgb(82, 181, 52);
+  @include pc {
+    width: rem(81);
+  }
+}
+
+.p-line__icon {
+  width: rem(20.3);
+}
+
+// ==========================================================================
+// p-pocket
+// ==========================================================================
+
+.p-pocket {
+  background-color: rgb(220, 79, 90);
+  @include pc {
+    width: rem(91);
+  }
+}
+
+.p-pocket__icon {
+  width: rem(21.6);
+}
+
+// ==========================================================================
+// p-pagination
+// ==========================================================================
+
+.p-pagination {
+    margin-top: rem(54);
+    display: flex;
+    column-gap: rem(79);
+    @include sp {
+      justify-content: space-between;
+      margin-top: rem(45);
+      column-gap: rem(22);
+    }
+}
+
+.p-pagination a {
+  width: 38.6%;
+  transition: all 0.5s ease;
+  &:hover {
+      opacity: 0.7;
+  }
+  @include sp {
+    width: 46.6%;
+  }
+}
+
+.p-pagination__prev {
+    background-color: $font-color1;
+    color: $font-color2;
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    text-align: left;
+    padding: rem(3) rem(20) rem(3);
+    width: 100%;
+    @include sp {
+        padding: rem(4) rem(20) rem(3);
+    }
+}
+
+.p-pagination__articlearea {
+    display: flex;
+    margin-top: rem(16);
+    column-gap: rem(16);
+}
+
+.p-pagination__image {
+    width: rem(98);
+}
+
+.p-pagination__image img {
+    aspect-ratio: 98 / 68;
+    object-fit: cover;
+}
+
+.p-pagination__title {
+    flex: 1;
+    font-size: rem(16);
+    font-weight: 600;
+    line-height: calc(25 / 16);
+    @include sp {
+        width: 100%;
+    }
+}
+
+.p-pagination__next {
+    text-align: right;
+}
+
+.p-pagination__link.is-next {
+    margin-left: auto;
+}
