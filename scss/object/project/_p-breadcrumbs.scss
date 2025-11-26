@@ -33,7 +33,6 @@
     flex-wrap: nowrap;            // 折り返さない
     white-space: nowrap;          // テキストも折り返さない
     column-gap: rem(20);
-    align-items: center;
     margin: 0 auto;
     @include sp {
         width: auto;
@@ -42,7 +41,7 @@
     }
 }
 
-.p-breadcrumbs__list li {
+.p-breadcrumbs__list span {
     display: flex;
     align-items: center; 
     height: 100%;
@@ -58,6 +57,8 @@
 }
 
 .p-breadcrumbs__list a {
+    height: 100%;
+    display: flex;
     transition: all .3s;
     &:hover {
     opacity: 0.5;
