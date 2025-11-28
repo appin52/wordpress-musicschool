@@ -1,0 +1,61 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/function' as *; 
+@use '../../foundation/mixin' as *;
+
+/* --------------
+c-pager
+-----------------*/
+
+.c-pager {
+    margin-top: rem(69);
+  .wp-pagenavi {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(7);
+    @include sp {
+      column-gap: rem(2);
+    }
+    .current,
+    a {
+      width: rem(50);
+      height: rem(50);
+      font-size: rem(18);
+      line-height: 1;
+      font-weight: bold;
+      text-align: center;
+      border: rem(1) solid $font-color1;
+      display: grid;
+      place-content: center;
+      transition: all 0.4s;
+      @include sp {
+        width: rem(44);
+        height: rem(44);
+        font-size: rem(16);
+      }
+      &:hover {
+        opacity: 1;
+        color: #fff;
+        background: #000;
+      }
+    }
+    .current {
+      color: #fff;
+      background: #000;
+    }
+    .extend {
+      display: inline-block;
+      padding-inline: rem(10);
+      font-size: rem(18);
+      font-weight: bold;
+      border: none;
+      @include sp {
+        font-size: rem(16);
+        padding-inline: rem(7);
+        padding-bottom: rem(10);
+      }
+    }
+ }
+}

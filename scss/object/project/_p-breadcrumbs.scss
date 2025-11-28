@@ -60,8 +60,22 @@
     height: 100%;
     display: flex;
     transition: all .3s;
+    font-size: rem(16);
+    line-height: 1;
+    align-items: center;
+    display: flex;           // ブロックレベルにして幅指定を反映
+    overflow: hidden;         // はみ出しを隠す
+    text-overflow: ellipsis;  // 省略記号
+    white-space: nowrap;      // 改行させない
+    max-width: 100%;          // li の幅いっぱいまで
     &:hover {
     opacity: 0.5;
+    }
+    @include sp {
+        padding-block: 0;
+        line-height: calc(33 / 16);
+        overflow: visible;   /* はみ出しを隠さない */
+        text-overflow: clip; /* 省略しない */
     }
 }
 
@@ -87,7 +101,23 @@
     }
 }
 
-.p-breadcrumbs__item {
+.post-result {
+    font-size: rem(16);
+    line-height: 1;
+    display: block;           // ブロックレベルにして幅指定を反映
+    overflow: hidden;         // はみ出しを隠す
+    text-overflow: ellipsis;  // 省略記号
+    white-space: nowrap;      // 改行させない
+    max-width: 100%;          // li の幅いっぱいまで
+    @include sp {
+        padding-block: 0;
+        line-height: calc(33 / 16);
+        overflow: visible;   /* はみ出しを隠さない */
+        text-overflow: clip; /* 省略しない */
+    }
+}
+
+.post-blog {
     font-size: rem(16);
     line-height: 1;
     display: block;           // ブロックレベルにして幅指定を反映
