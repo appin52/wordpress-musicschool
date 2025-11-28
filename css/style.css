@@ -782,7 +782,7 @@ c-circle
 }
 
 /* --------------
-c-pagination
+c-pager
 -----------------*/
 .c-pager {
   margin-top: 4.3125rem;
@@ -836,7 +836,6 @@ c-pagination
 .c-pager .wp-pagenavi .extend {
   display: inline-block;
   padding-inline: 0.625rem;
-  padding-bottom: 0.625rem;
   font-size: 1.125rem;
   font-weight: bold;
   border: none;
@@ -2082,7 +2081,6 @@ c-side-title
   white-space: nowrap;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
-  align-items: center;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
@@ -2093,7 +2091,7 @@ c-side-title
   }
 }
 
-.p-breadcrumbs__list li {
+.p-breadcrumbs__list span {
   display: flex;
   align-items: center;
   height: 100%;
@@ -2101,20 +2099,38 @@ c-side-title
   flex-shrink: 0; /* アイテムを縮めない */
   /* 最後の項目だけは縮める */
 }
-.p-breadcrumbs__list li:last-child {
+.p-breadcrumbs__list span:last-child {
   flex-shrink: 1;
 }
 @media (max-width: 767px) {
-  .p-breadcrumbs__list li:last-child {
+  .p-breadcrumbs__list span:last-child {
     flex-shrink: 0;
   }
 }
 
 .p-breadcrumbs__list a {
+  height: 100%;
+  display: flex;
   transition: all 0.3s;
+  font-size: 1rem;
+  line-height: 1;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 .p-breadcrumbs__list a:hover {
   opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .p-breadcrumbs__list a {
+    padding-block: 0;
+    line-height: 2.0625;
+    overflow: visible; /* はみ出しを隠さない */
+    text-overflow: clip; /* 省略しない */
+  }
 }
 
 .p-breadcrumbs__link {
@@ -2141,7 +2157,7 @@ c-side-title
   }
 }
 
-.p-breadcrumbs__item {
+.post-result {
   font-size: 1rem;
   line-height: 1;
   display: block;
@@ -2151,7 +2167,25 @@ c-side-title
   max-width: 100%;
 }
 @media (max-width: 767px) {
-  .p-breadcrumbs__item {
+  .post-result {
+    padding-block: 0;
+    line-height: 2.0625;
+    overflow: visible; /* はみ出しを隠さない */
+    text-overflow: clip; /* 省略しない */
+  }
+}
+
+.post-blog {
+  font-size: 1rem;
+  line-height: 1;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .post-blog {
     padding-block: 0;
     line-height: 2.0625;
     overflow: visible; /* はみ出しを隠さない */
