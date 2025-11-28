@@ -639,7 +639,7 @@ img {
   right: 7.25rem;
   z-index: 999;
   cursor: pointer;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* 非表示へ移行するときに .3s 遅延させる */
   /* ホバー時のフェード */
 }
 @media (max-width: 767px) {
@@ -654,6 +654,7 @@ img {
 .c-back-btn.active {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
 }
 
 .c-back-btn__icon {
@@ -672,7 +673,7 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .c-btn:hover {
   color: #cb0000;
@@ -694,7 +695,7 @@ img {
   position: absolute;
   bottom: 28.2rem;
   right: 0;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, opacity 0.3s ease, visibility 0s linear 0.3s; /* 非表示へ移行するときに .3s 遅延させる */
 }
 .c-btn--contact:hover {
   color: #cb0000;
@@ -715,6 +716,7 @@ img {
 .c-btn--contact.active {
   opacity: 1;
   visibility: visible;
+  transition: background-color 0.5s ease, color 0.5s ease, opacity 0.3s ease, visibility 0s linear 0s;
 }
 
 /* --------------
@@ -3449,7 +3451,7 @@ c-side-title
   flex: 1;
 }
 
-.p-result-section__texttitle {
+.p-result-section__title {
   font-size: 1.25rem;
   line-height: 1.25;
   font-weight: 600;
