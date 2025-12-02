@@ -119,3 +119,10 @@
         margin-top: rem(8);
     }
 }
+
+.p-related__no-post {
+    margin-top: rem(30);
+    @include sp {
+        margin-top: rem(20);
+    }
+}
