@@ -1041,11 +1041,11 @@ c-side-title
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  border-top: 0.1875rem solid #CB0000;
-  border-left: 0.1875rem solid #CB0000;
+  background-image: url("/images/top/arrowhead.svg");
+  background-size: contain; /* サイズに合わせてSVGを調整 */
+  background-repeat: no-repeat;
   top: -200%;
   left: -10%;
-  transform: rotate(45deg);
 }
 
 .p-flow-card:last-of-type .p-flow-card__circle::after {
