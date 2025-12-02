@@ -1170,6 +1170,7 @@ c-side-title
 }
 
 .p-top-voice {
+  position: relative;
   padding-block: 2.75rem 5rem;
   background-color: #cb0000;
 }
@@ -1180,8 +1181,7 @@ c-side-title
 }
 
 .p-top-voice__inner {
-  position: relative;
-  width: 60.9375rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .p-top-voice__inner {
@@ -1287,7 +1287,7 @@ c-side-title
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 54%;
+  top: 50%;
   z-index: 300;
   width: 1.8125rem;
   height: 2.5rem;
@@ -1321,7 +1321,7 @@ c-side-title
 }
 
 .swiper-button-next {
-  right: -0.75rem;
+  right: 5%;
 }
 @media (max-width: 767px) {
   .swiper-button-next {
@@ -1330,7 +1330,7 @@ c-side-title
 }
 
 .swiper-button-prev {
-  left: -0.75rem;
+  left: 5%;
 }
 @media (max-width: 767px) {
   .swiper-button-prev {

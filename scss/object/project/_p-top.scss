@@ -308,6 +308,7 @@
 // ==========================================================================
 
 .p-top-voice {
+    position: relative;
     padding-block: rem(44) rem(80);
     background-color: $main-color;
     @include sp {
@@ -316,8 +317,7 @@
 }
 
 .p-top-voice__inner {
-    position: relative;
-    width: rem(975);
+    width: 100%;
     @include sp {
         padding-inline: rem(20);
         width: 100%;
@@ -422,7 +422,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 54%;
+    top: 50%;
     z-index: 300;
     width: rem(29);
     height: rem(40);
@@ -452,7 +452,7 @@
 
   // 右矢印
   .swiper-button-next {
-    right: rem(-12);
+    right: 5%;
     @include sp {
       right: rem(20);
     }
@@ -460,7 +460,7 @@
 
   // 左矢印
   .swiper-button-prev {
-    left: rem(-12);
+    left: 5%;
     @include sp {
       left: rem(20);
     }
