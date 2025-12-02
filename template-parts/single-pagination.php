@@ -15,7 +15,7 @@
                                     <?php if (has_post_thumbnail($prev_post->ID)): ?>
                                         <?php echo get_the_post_thumbnail($prev_post->ID); ?>
                                     <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="No Image">
                                     <?php endif; ?>
                                 </div>
                                 <p class="p-pagination__title js-ellipsis25">
@@ -37,7 +37,7 @@
                                     <?php if (has_post_thumbnail($next_post->ID)): ?>
                                         <?php echo get_the_post_thumbnail($next_post->ID); ?>
                                     <?php else: ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png" alt="No image">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="No Image">
                                     <?php endif; ?>
                                 </div>
                                 <p class="p-pagination__title js-ellipsis25">
