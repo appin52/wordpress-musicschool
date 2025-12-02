@@ -4146,6 +4146,15 @@ c-side-title
   }
 }
 
+.p-related__no-post {
+  margin-top: 1.875rem;
+}
+@media (max-width: 767px) {
+  .p-related__no-post {
+    margin-top: 1.25rem;
+  }
+}
+
 @media (min-width: 768px) {
   .u-sp {
     display: none !important;
