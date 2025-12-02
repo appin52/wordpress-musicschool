@@ -309,7 +309,7 @@
                             }
                             ?> 
                         </p>
-                        <h3 class="p-blog-card__title js-ellipsis25">
+                        <h3 class="p-blog-card__title">
                             <?php echo get_the_title(); ?>
                         </h3>
                         <time datetime="<?php the_time('Y-m-d'); ?>" class="p-blog-card__date">

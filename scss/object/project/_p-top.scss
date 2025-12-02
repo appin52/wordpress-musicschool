@@ -317,6 +317,7 @@
 }
 
 .p-top-voice__inner {
+    position: relative;
     width: 100%;
     @include sp {
         padding-inline: rem(20);
@@ -393,12 +394,15 @@
     text-align: center;
     color: $font-color2;
     transition: 0.3s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     @include sp {
         padding-top: rem(27);
     }
+}
+
+.p-slider-card__name h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .p-slider-card__comment {
@@ -422,7 +426,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-    top: 50%;
+    top: 55%;
     z-index: 300;
     width: rem(29);
     height: rem(40);
@@ -452,7 +456,10 @@
 
   // 右矢印
   .swiper-button-next {
-    right: 5%;
+    right: rem(-13);
+    @media (max-width: 1000px) {
+        right: rem(20);
+    }
     @include sp {
       right: rem(20);
     }
@@ -460,7 +467,10 @@
 
   // 左矢印
   .swiper-button-prev {
-    left: 5%;
+    left: rem(-13);
+    @media (max-width: 1000px) {
+        left: rem(20);
+    }
     @include sp {
       left: rem(20);
     }
@@ -760,7 +770,8 @@
 // ==========================================================================
 
 .p-blog-card {
-    // width: rem(260);
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-width: 0;
     transition: 0.3s;
@@ -784,6 +795,11 @@
 }
 
 .p-blog-card__title {
+    flex-grow: 1;   // ★追加: 残りのスペースを全て占有する
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     margin-top: rem(20);
     font-size: rem(20);
     line-height: calc(25 / 20);
