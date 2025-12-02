@@ -162,7 +162,12 @@
 }
 
 .p-header-nav__lists li:last-child a {
+    justify-content: center;
     font-size: rem(15);
+    width: 100%;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 
