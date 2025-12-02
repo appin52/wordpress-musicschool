@@ -172,13 +172,14 @@
       &::before {
         content: "";
         position: absolute;
-        width: rem(24);
-        height: rem(24);
-        background-image: url("/images/top/arrowhead.svg");
+        width: rem(30);
+        height: rem(15);
+        background-image: url("../images/top/arrowhead.svg");
         background-size: contain; /* サイズに合わせてSVGを調整 */
         background-repeat: no-repeat;
-        top: -200%;
-        left: -10%;
+        top: -220%;
+        left: 59%;
+        transform: translateX(-50%);
       }
     }
 }
@@ -512,16 +513,16 @@
     position: absolute;
     display: block;
     content: "";
-    left: rem(60);
+    left: rem(40);
     bottom: rem(-5);
-    transform-origin: left bottom;
-    rotate: -45deg;
-    width: rem(24);
-    height: rem(24);
-    border-left: rem(3) solid $main-color;
-    border-bottom: rem(3) solid $main-color;
+    width: rem(35);
+    height: rem(18);
+    background-image: url("../images/top/arrowhead.svg");
+    background-size: contain; /* サイズに合わせてSVGを調整 */
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
     @include sp {
-        left: rem(18);
+        left: rem(-1.5);
         bottom: rem(8);
     }
 }
