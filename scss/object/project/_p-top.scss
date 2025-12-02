@@ -174,11 +174,11 @@
         position: absolute;
         width: rem(24);
         height: rem(24);
-        border-top: rem(3) solid #CB0000;
-        border-left: rem(3) solid #CB0000;
+        background-image: url("/images/top/arrowhead.svg");
+        background-size: contain; /* サイズに合わせてSVGを調整 */
+        background-repeat: no-repeat;
         top: -200%;
         left: -10%;
-        transform:rotate(45deg);
       }
     }
 }
