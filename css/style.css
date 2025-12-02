@@ -1039,13 +1039,14 @@ c-side-title
 .p-flow-card:first-of-type .p-flow-card__circle::before {
   content: "";
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url("/images/top/arrowhead.svg");
+  width: 1.875rem;
+  height: 0.9375rem;
+  background-image: url("../images/top/arrowhead.svg");
   background-size: contain; /* サイズに合わせてSVGを調整 */
   background-repeat: no-repeat;
-  top: -200%;
-  left: -10%;
+  top: -220%;
+  left: 59%;
+  transform: translateX(-50%);
 }
 
 .p-flow-card:last-of-type .p-flow-card__circle::after {
@@ -1383,18 +1384,18 @@ c-side-title
   position: absolute;
   display: block;
   content: "";
-  left: 3.75rem;
+  left: 2.5rem;
   bottom: -0.3125rem;
-  transform-origin: left bottom;
-  rotate: -45deg;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-left: 0.1875rem solid #cb0000;
-  border-bottom: 0.1875rem solid #cb0000;
+  width: 2.1875rem;
+  height: 1.125rem;
+  background-image: url("../images/top/arrowhead.svg");
+  background-size: contain; /* サイズに合わせてSVGを調整 */
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
 }
 @media (max-width: 767px) {
   .p-top-process__lists::after {
-    left: 1.125rem;
+    left: -0.09375rem;
     bottom: 0.5rem;
   }
 }
