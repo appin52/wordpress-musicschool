@@ -1181,7 +1181,10 @@ c-side-title
 }
 
 .p-top-voice__inner {
+<<<<<<< HEAD
   position: relative;
+=======
+>>>>>>> 2926dea (修正)
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -1291,7 +1294,11 @@ c-side-title
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
+<<<<<<< HEAD
   top: 55%;
+=======
+  top: 50%;
+>>>>>>> 2926dea (修正)
   z-index: 300;
   width: 1.8125rem;
   height: 2.5rem;
@@ -1325,12 +1332,16 @@ c-side-title
 }
 
 .swiper-button-next {
+<<<<<<< HEAD
   right: -0.8125rem;
 }
 @media (max-width: 1000px) {
   .swiper-button-next {
     right: 1.25rem;
   }
+=======
+  right: 5%;
+>>>>>>> 2926dea (修正)
 }
 @media (max-width: 767px) {
   .swiper-button-next {
@@ -1339,12 +1350,16 @@ c-side-title
 }
 
 .swiper-button-prev {
+<<<<<<< HEAD
   left: -0.8125rem;
 }
 @media (max-width: 1000px) {
   .swiper-button-prev {
     left: 1.25rem;
   }
+=======
+  left: 5%;
+>>>>>>> 2926dea (修正)
 }
 @media (max-width: 767px) {
   .swiper-button-prev {
