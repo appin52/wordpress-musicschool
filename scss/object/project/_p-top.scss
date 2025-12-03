@@ -317,10 +317,7 @@
 }
 
 .p-top-voice__inner {
-<<<<<<< HEAD
     position: relative;
-=======
->>>>>>> 2926dea (修正)
     width: 100%;
     @include sp {
         padding-inline: rem(20);
@@ -429,11 +426,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
-<<<<<<< HEAD
     top: 55%;
-=======
-    top: 50%;
->>>>>>> 2926dea (修正)
     z-index: 300;
     width: rem(29);
     height: rem(40);
@@ -463,14 +456,10 @@
 
   // 右矢印
   .swiper-button-next {
-<<<<<<< HEAD
     right: rem(-13);
     @media (max-width: 1000px) {
         right: rem(20);
     }
-=======
-    right: 5%;
->>>>>>> 2926dea (修正)
     @include sp {
       right: rem(20);
     }
@@ -478,14 +467,10 @@
 
   // 左矢印
   .swiper-button-prev {
-<<<<<<< HEAD
     left: rem(-13);
     @media (max-width: 1000px) {
         left: rem(20);
     }
-=======
-    left: 5%;
->>>>>>> 2926dea (修正)
     @include sp {
       left: rem(20);
     }
