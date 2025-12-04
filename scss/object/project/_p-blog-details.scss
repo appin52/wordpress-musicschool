@@ -107,10 +107,18 @@
 .p-blog-body li {
   font-size: rem(18);
   line-height: calc(30 / 18);
+  position: relative;
+  padding-left: 1em;
   @include sp {
     font-size: rem(16);
     line-height: calc(30 /16);
   }
+}
+
+.p-blog-body li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
 }
 
 .p-blog-body hr {
