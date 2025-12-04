@@ -42,31 +42,31 @@
                             $url = urlencode(get_permalink());
                             $title = urlencode(get_the_title());
                             ?>
-                            <a href="<?php echo esc_url('https://www.facebook.com/share.php?u=' . $url); ?>" class="p-sns-share__item p-facebook">
+                            <a href="<?php echo esc_url('https://www.facebook.com/share.php?u=' . $url); ?>" class="p-sns-share__item p-facebook" target="_blank" rel="noopener noreferrer">
                                 <span class="p-facebook__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-facebook.svg" alt="facebook">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Facebook</span>
                             </a>
-                            <a href="<?php echo esc_url('https://x.com/share?url=' . $url . '&text=' . $title); ?>" class="p-sns-share__item p-twitter">
+                            <a href="<?php echo esc_url('https://x.com/share?url=' . $url . '&text=' . $title); ?>" class="p-sns-share__item p-twitter" target="_blank" rel="noopener noreferrer">
                                 <span class="p-twitter__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-twitter.svg" alt="twitter">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Twitter</span>
                             </a>
-                            <a href="<?php echo esc_url('http://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title); ?>" class="p-sns-share__item p-hatena">
+                            <a href="<?php echo esc_url('http://b.hatena.ne.jp/add?mode=confirm&url=' . $url . '&title=' . $title); ?>" class="p-sns-share__item p-hatena" target="_blank" rel="noopener noreferrer">
                                 <span class="p-hatena__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-hatena.svg" alt="hatena">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Hatena</span>
                             </a>
-                            <a href="<?php echo esc_url('https://social-plugins.line.me/lineit/share?url=' . $url); ?>" class="p-sns-share__item p-line">
+                            <a href="<?php echo esc_url('https://social-plugins.line.me/lineit/share?url=' . $url); ?>" class="p-sns-share__item p-line" target="_blank" rel="noopener noreferrer">
                                 <span class="p-line__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-line.svg" alt="line">
                                 </span>
                                 <span class="p-sns-share__name u-pc">Twitter</span>
                             </a>
-                            <a href="<?php echo esc_url('https://getpocket.com/edit?url=' . $url . '&title=' . $title); ?>" class="p-sns-share__item p-pocket">
+                            <a href="<?php echo esc_url('https://getpocket.com/edit?url=' . $url . '&title=' . $title); ?>" class="p-sns-share__item p-pocket" target="_blank" rel="noopener noreferrer">
                                 <span class="p-pocket__icon">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/blog-details/icon-share-pocket.svg" alt="pocket">
                                 </span>
