@@ -11,9 +11,9 @@
                     $total_posts = $wp_query->found_posts;
                     ?>
                 <div class="p-search-list__keyword">
-                    <h1 class="p-search-list__title">
+                    <h2 class="p-search-list__title">
                         「<span><?php echo get_search_query(); ?></span>」の検索結果
-                    </h1>
+                    </h2>
                     <p><?php echo $total_posts ?>件</p>
                 </div>
             <div class="p-search-list__items">
@@ -22,8 +22,6 @@
                 the_post();
                 ?>
                 <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
                             <div class="p-list-item__image">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <?php the_post_thumbnail(); ?>
@@ -39,7 +37,6 @@
                                 }
                                 ?>
                             </div>
-                        </div>
                         <div class="p-list-item__textarea">
                             <h2 class="p-list-item__title">
                                 <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
@@ -51,7 +48,6 @@
                                 <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
                             </p>
                         </div>
-                    </div>
                 </a>
                 <?php
                 endwhile;
