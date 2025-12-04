@@ -2526,24 +2526,18 @@ c-side-title
 }
 
 .p-list-item {
-  transition: all 0.3s ease;
-}
-.p-list-item:hover {
-  opacity: 0.7;
-}
-
-.p-list-item__wrap {
+  transition: all 0.4s ease;
   width: 100%;
   display: flex;
   -moz-column-gap: 3.125rem;
        column-gap: 3.125rem;
   transition: all 0.5s ease;
 }
-.p-list-item__wrap:hover {
+.p-list-item:hover {
   opacity: 0.7;
 }
 @media (max-width: 767px) {
-  .p-list-item__wrap {
+  .p-list-item {
     flex-direction: column;
     row-gap: 1.875rem;
   }

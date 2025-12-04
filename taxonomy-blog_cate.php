@@ -32,7 +32,6 @@
             the_post();
             ?>
                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
                         <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <?php if (has_post_thumbnail()) : ?>
@@ -61,7 +60,6 @@
                                 <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
                             </p>
                         </div>
-                    </div>
                 </a>
             <?php
                 endwhile;

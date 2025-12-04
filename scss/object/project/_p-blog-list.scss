@@ -30,13 +30,7 @@
 // ==========================================================================
 
 .p-list-item {
-    transition: all 0.3s ease;
-    &:hover {
-        opacity: 0.7;
-    }
-}
-
-.p-list-item__wrap {
+    transition: all 0.4s ease;
     width: 100%;
     display: flex;
     column-gap: rem(50);
@@ -44,11 +38,25 @@
     &:hover {
         opacity: 0.7;
     }
-    @include sp {
+     @include sp {
         flex-direction: column;
         row-gap: rem(30);
     }
 }
+
+// .p-list-item__wrap {
+//     width: 100%;
+//     display: flex;
+//     column-gap: rem(50);
+//     transition: all 0.5s ease;
+//     &:hover {
+//         opacity: 0.7;
+//     }
+//     @include sp {
+//         flex-direction: column;
+//         row-gap: rem(30);
+//     }
+// }
 
 .p-list-item__right {
     position: relative;
