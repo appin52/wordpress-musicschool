@@ -58,14 +58,6 @@
 //     }
 // }
 
-.p-list-item__right {
-    position: relative;
-    width: rem(260);
-    @include sp {
-        width: 100%;
-    }
-}
-
 .p-list-item__image {
     width: rem(260); 
     @include sp {

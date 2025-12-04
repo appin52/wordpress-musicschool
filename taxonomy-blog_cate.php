@@ -32,22 +32,20 @@
             the_post();
             ?>
                 <a href="./blog-details.html" class="p-list-section__item p-list-item">
-                        <div class="p-list-item__right">
-                            <div class="p-list-item__image">
+                        <div class="p-list-item__image">
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail(); ?>
                             <?php else : ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="No Image">
                             <?php endif; ?>
-                            </div>
-                            <div class="c-category p-list-item__category">
-                                <?php
+                        </div>
+                        <div class="c-category p-list-item__category">
+                            <?php
                                 $terms = get_the_terms(get_the_ID(), 'blog_cate');
                                 if (!empty($terms) && !is_wp_error($terms)) {
                                     echo esc_html($terms[0]->name);
                                 }
-                                ?>
-                            </div>
+                            ?>
                         </div>
                         <div class="p-list-item__textarea">
                             <h3 class="p-list-item__title js-ellipsis25">

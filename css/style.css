@@ -2543,16 +2543,6 @@ c-side-title
   }
 }
 
-.p-list-item__right {
-  position: relative;
-  width: 16.25rem;
-}
-@media (max-width: 767px) {
-  .p-list-item__right {
-    width: 100%;
-  }
-}
-
 .p-list-item__image {
   width: 16.25rem;
 }
