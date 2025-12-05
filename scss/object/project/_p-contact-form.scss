@@ -248,3 +248,12 @@ label {
 .wpcf7-spinner {
   display: none;
 }
+
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+	display: none;
+	margin-top: 10px;
+}
+
+.wpcf7-form-control-wrap.is-show .wpcf7-not-valid-tip {
+	display: block;
+}

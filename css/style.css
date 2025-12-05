@@ -3333,6 +3333,15 @@ c-side-title
   display: none;
 }
 
+.wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  display: none;
+  margin-top: 10px;
+}
+
+.wpcf7-form-control-wrap.is-show .wpcf7-not-valid-tip {
+  display: block;
+}
+
 .p-contact-send__area {
   padding-block: 4.25rem 5.625rem;
 }
