@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="p-result-section__textarea">
-                                <h3 class="p-result-section__texttitle"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></h3>
+                                <h3 class="p-result-section__title"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></h3>
                                 <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                             </div>
                         </a>

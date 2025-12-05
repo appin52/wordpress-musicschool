@@ -3296,6 +3296,7 @@ c-side-title
 .wpcf7-not-valid-tip {
   margin-top: 6px;
   color: #cb0000;
+  font-size: 0.75rem;
 }
 
 .wpcf7 form.invalid .wpcf7-response-output {
@@ -3585,6 +3586,7 @@ c-side-title
 
 .p-details__tablearea {
   display: flex;
+  align-items: flex-start;
   margin-top: 3.4375rem;
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
