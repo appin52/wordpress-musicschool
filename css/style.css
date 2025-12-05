@@ -3400,11 +3400,6 @@ c-side-title
   justify-content: center;
   margin-top: 2.5rem;
 }
-@media (max-width: 767px) {
-  .p-404__btnarea {
-    margin-top: 0.5625rem;
-  }
-}
 
 .p-404__btn {
   width: 15.625rem;

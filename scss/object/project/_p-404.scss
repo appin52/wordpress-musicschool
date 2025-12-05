@@ -29,9 +29,6 @@
     display: flex;
     justify-content: center;
     margin-top: rem(40);
-    @include sp {
-        margin-top: rem(9);
-    }
 }
 
 .p-404__btn {
