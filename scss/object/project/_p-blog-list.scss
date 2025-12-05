@@ -44,20 +44,6 @@
     }
 }
 
-// .p-list-item__wrap {
-//     width: 100%;
-//     display: flex;
-//     column-gap: rem(50);
-//     transition: all 0.5s ease;
-//     &:hover {
-//         opacity: 0.7;
-//     }
-//     @include sp {
-//         flex-direction: column;
-//         row-gap: rem(30);
-//     }
-// }
-
 .p-list-item__image {
     width: rem(260); 
     @include sp {
@@ -89,6 +75,10 @@
     line-height: calc(25 / 20);
     font-weight: 600;
     margin-bottom: rem(3);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     @include sp {
         line-height: calc(30 / 20);
     }

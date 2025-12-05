@@ -28,8 +28,6 @@
             the_post();
             ?>
                 <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
-                    <div class="p-list-item__wrap">
-                        <div class="p-list-item__right">
                             <div class="p-list-item__image">
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail(); ?>
@@ -45,7 +43,6 @@
                                 }
                                 ?>
                             </div>
-                        </div>
                         <div class="p-list-item__textarea">
                             <h3 class="p-list-item__title js-ellipsis25">
                                 <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
@@ -57,7 +54,6 @@
                                 <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
                             </p>
                         </div>
-                    </div>
                 </a>
             <?php
                 endwhile;
