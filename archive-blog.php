@@ -18,22 +18,24 @@
         <!-- blog-list -->
         <section class="p-blog-list__section p-list-section">
             <div class="p-list-section__inner l-inner">
+                
                 <h2 class="p-list-section__title c-title2">
                     ブログ一覧
                 </h2>
-            <div class="p-list-section__items">
-            <?php
-            if (have_posts()):
-            while (have_posts()):
-            the_post();
-            ?>
-                <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
+                
+                <?php if (have_posts()): ?>
+                <div class="p-list-section__items">
+                        <?php
+                        while (have_posts()):
+                            the_post();
+                        ?>
+                        <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
                             <div class="p-list-item__image">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail(); ?>
-                            <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
-                            <?php endif; ?>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail(); ?>
+                                <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.png" alt="No image">
+                                <?php endif; ?>
                             </div>
                             <div class="c-category p-list-item__category">
                                 <?php
@@ -43,28 +45,32 @@
                                 }
                                 ?>
                             </div>
-                        <div class="p-list-item__textarea">
-                            <h3 class="p-list-item__title js-ellipsis25">
-                                <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
-                            </h3>
-                            <time datetime="<?php the_time('Y-m-d'); ?>" class="p-list-item__time">
-                                <?php the_time('Y.m.d'); ?>
-                            </time>
-                            <p class="p-list-item__article">
-                                <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
-                            </p>
-                        </div>
-                </a>
-            <?php
-                endwhile;
-            endif;
-            ?>
+                            <div class="p-list-item__textarea">
+                                <h3 class="p-list-item__title js-ellipsis25">
+                                    <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
+                                </h3>
+                                <time datetime="<?php the_time('Y-m-d'); ?>" class="p-list-item__time">
+                                    <?php the_time('Y.m.d'); ?>
+                                </time>
+                                <p class="p-list-item__article">
+                                    <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
+                                </p>
+                            </div>
+                        </a>
+                        <?php endwhile; ?>
+                    </div>
+
+                    <div class="c-pager">
+                        <?php wp_pagenavi(); ?>
+                    </div>
+                <?php else : ?>
+                <div class="p-list-section__no">
+                        <p>投稿された記事はありません。</p>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="p-list-section__btn c-btn">TOPへ戻る</a>
+                    </div>
+                <?php endif; ?>
+            
             </div>
-            <!-- ページネーション -->
-             <div class="c-pager">
-                <?php wp_pagenavi(); ?>
-            </div>
-        </div>
         </section>
     <?php get_template_part('template-parts/fix-area'); ?>
     </main>
