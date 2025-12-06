@@ -17,21 +17,14 @@
         
         <!-- blog-list -->
         <section class="p-blog-list__section p-list-section">
-            <div class="p-list-section__inner l-inner">
+        <div class="p-list-section__inner l-inner">
+           <div class="p-list-section__items">
                 <?php
-                $term = get_queried_object();
-                $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
+                if (have_posts()):
+                    while (have_posts()):
+                        the_post();
                 ?>
-                <h2 class="p-list-section__title c-title2">
-                    <?php echo esc_html($term_name); ?>
-                </h2>
-            <div class="p-list-section__items">
-            <?php
-            if (have_posts()):
-            while (have_posts()):
-            the_post();
-            ?>
-                <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
+                    <a href="<?php the_permalink(); ?>" class="p-list-section__item p-list-item">
                         <div class="p-list-item__image">
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail(); ?>
@@ -58,15 +51,13 @@
                                 <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
                             </p>
                         </div>
-                </a>
-            <?php
-                endwhile;
-            endif;
-            ?>
-            </div>
-            <!-- ページネーション -->
-             <div class="c-pager">
-                <?php wp_pagenavi(); ?>
+                    </a>
+                <?php endwhile; else :?>
+                    <div class="c-no-data">
+                        <p class="c-no-data__text">投稿された記事はありません。</p>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="c-no-data__btn c-btn">TOPへ戻る</a>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
         </section>

@@ -60,10 +60,10 @@
                     </div>
 
                 <?php else : ?>
-                <div class="p-result-section__no">
-                        <p>投稿された記事はありません。</p>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="p-result-section__btn c-btn">TOPへ戻る</a>
-                    </div>
+                <div class="c-no-data">
+                    <p class="c-no-data__text">投稿された記事はありません。</p>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="c-no-data__btn c-btn">TOPへ戻る</a>
+                </div>
                 <?php endif; ?>
                 
             </div>

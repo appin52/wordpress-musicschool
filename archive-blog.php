@@ -64,10 +64,10 @@
                         <?php wp_pagenavi(); ?>
                     </div>
                 <?php else : ?>
-                <div class="p-list-section__no">
-                        <p>投稿された記事はありません。</p>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="p-list-section__btn c-btn">TOPへ戻る</a>
-                    </div>
+                <div class="c-no-data">
+                    <p class="c-no-data__text">投稿された記事はありません。</p>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="c-no-data__btn c-btn">TOPへ戻る</a>
+                </div>
                 <?php endif; ?>
             
             </div>
