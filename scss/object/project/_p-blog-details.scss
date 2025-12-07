@@ -71,6 +71,7 @@
 
 
 .p-blog-body p {
+  margin-block: rem(17);
   font-size: rem(18);
   line-height: calc(30 / 18);
   @include sp {
@@ -91,17 +92,17 @@
 }
 
 .p-blog-body figure {
-  margin-top: rem(17);
+  margin-block: rem(17);
   width: rem(335);
   @include sp {
-    margin-top: rem(70);
+    margin-top: rem(39);
     width: 100%;
   }
 }
 
 
 .p-blog-body ul,ol {
-  margin-top: rem(28);
+  margin-block: rem(28);
 }
 
 .p-blog-body li {
@@ -126,9 +127,9 @@
   background-color: $font-color1;
   width: 100%;
   border-bottom: 1px solid;
-  margin-block: rem(42) rem(43);
+  margin-block: rem(41);
   @include sp {
-    margin-block: rem(37) rem(50);
+    margin-bottom: rem(50);
   }
 }
 
@@ -138,6 +139,7 @@
   font-weight: 600;
   padding-left: rem(11);
   position: relative;
+  margin-block: rem(43) rem(17);
   @include sp {
     line-height: calc(30 / 20);
   }
@@ -184,8 +186,9 @@
 .p-blog-body a {
   font-size: rem(20);
   line-height: calc(33 / 20);
+  font-weight: 600;
   color: $main-color;
-  margin-top: rem(18);
+  margin-block: rem(18);
   text-decoration: underline;
   transition: all 0.3s ease;
   &:hover {
