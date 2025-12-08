@@ -2854,6 +2854,10 @@ c-side-title
   flex: 1;
 }
 
+.p-blog-body blockquote p {
+  margin-block: 0;
+}
+
 .p-blog-body a {
   font-size: 1.25rem;
   line-height: 1.65;
@@ -4177,10 +4181,19 @@ c-side-title
 }
 
 .p-related__right {
-  width: 29.5%;
+  width: 12.5rem;
 }
 @media (max-width: 767px) {
   .p-related__right {
+    width: 47.7%;
+  }
+}
+
+.p-result-details__section .p-details__inner .p-result-details__related .p-related__item .p-related__wrap .p-related__right {
+  width: 29.5%;
+}
+@media (max-width: 767px) {
+  .p-result-details__section .p-details__inner .p-result-details__related .p-related__item .p-related__wrap .p-related__right {
     width: 47.7%;
   }
 }

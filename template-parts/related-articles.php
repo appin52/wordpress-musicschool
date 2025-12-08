@@ -37,8 +37,6 @@ if ( ! empty($terms) && ! is_wp_error($terms) ) :
   ];
 
   $the_query = new WP_Query($args);
-
-  // ▼変更点: ここで have_posts() の判定をせず、まずは外枠を表示します
 ?>
 <div class="p-blog-details__related p-related">
   <h2 class="p-related__label">関連記事</h2>
@@ -86,5 +84,5 @@ if ( ! empty($terms) && ! is_wp_error($terms) ) :
 
 </div>
 <?php
-endif; // End of if(!empty($terms)...
+endif;
 ?>

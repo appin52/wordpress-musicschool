@@ -50,11 +50,31 @@
     }
 }
 
+
+// 投稿タイプ 'blog' の個別ページでのスタイル
 .p-related__right {
-    width: 29.5%;
-    @include sp {
+      width: rem(200);
+      @include sp {
         width: 47.7%;
+      }
     }
+
+// 投稿タイプ 'result' の個別ページでのスタイル
+.p-result-details__section{
+    .p-details__inner {
+.p-result-details__related {
+  .p-related__item {
+    .p-related__wrap {
+    .p-related__right {
+     width: 29.5%;
+        @include sp {
+        width: 47.7%;
+      }
+    }
+  }
+}
+}
+}
 }
 
 .p-related__image {
