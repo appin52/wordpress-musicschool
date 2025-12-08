@@ -4189,11 +4189,11 @@ c-side-title
   }
 }
 
-.p-result-details__section .p-details__inner .p-result-details__related .p-related__item .p-related__wrap .p-related__right {
-  width: 29.5%;
+.p-result-details__section .p-blog-details__related .p-related__right {
+  width: 16.25rem;
 }
 @media (max-width: 767px) {
-  .p-result-details__section .p-details__inner .p-result-details__related .p-related__item .p-related__wrap .p-related__right {
+  .p-result-details__section .p-blog-details__related .p-related__right {
     width: 47.7%;
   }
 }
