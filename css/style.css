@@ -4252,6 +4252,42 @@ c-side-title
   }
 }
 
+.p-fix-area {
+  width: 1.875rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  pointer-events: none;
+}
+@media (max-width: 767px) {
+  .p-fix-area {
+    width: 20.9375rem;
+    right: initial;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.p-fix-area__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+  position: sticky;
+  top: calc(100% - 15.8rem);
+}
+@media (max-width: 767px) {
+  .p-fix-area__inner {
+    row-gap: 2rem;
+    align-items: flex-end;
+    top: calc(100% - 14.8rem);
+  }
+}
+
 @media (min-width: 768px) {
   .u-sp {
     display: none !important;
