@@ -17,9 +17,9 @@
         height: rem(36);
         overflow-x: auto;    /* 横スクロール有効化 */
         /* スクロールバー非表示設定 */
-        -ms-overflow-style: none;  /* IE・Edge */
-        scrollbar-width: none;     /* Firefox */
-        &::-webkit-scrollbar {     /* Chrome, Safari, Opera */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar { 
         display: none;
         }
     }
@@ -34,6 +34,7 @@
     white-space: nowrap;          // テキストも折り返さない
     column-gap: rem(20);
     margin: 0 auto;
+    overflow: hidden;
     @include sp {
         width: auto;
         max-width: none;
@@ -43,92 +44,73 @@
 
 .p-breadcrumbs__list span {
     display: flex;
-    align-items: center; 
+    align-items: center;
+    max-width: 100%;
     height: 100%;
     min-width: 0;
-    flex-shrink: 0;    /* アイテムを縮めない */
+    flex-shrink: 0;
     /* 最後の項目だけは縮める */
-    &:last-child {
-        flex-shrink: 1;
-        @include sp {
-            flex-shrink: 0;
+    &:last-of-type {
+        @include pc { // PC表示の時に適用
+            // 親要素のspan自身、またはその中のspan要素に適用
+            flex-shrink: 1; // 最後の要素だけ縮むように設定
+            min-width: 0; // 縮む設定と合わせて最小幅をリセット
+            
+            // テキストを保持する要素に適用 (ここでは仮に直下のspanとする)
+            span {
+                display: block; // インライン要素をブロック要素に変更
+                max-width: 100%; // 親要素の幅いっぱいまで
+                overflow: hidden; // はみ出たテキストを隠す
+                text-overflow: ellipsis; // 3点リーダー表示
+                white-space: nowrap; // テキストを折り返さない
+                line-height: rem(50);
+            }
         }
+        @include sp {
+            flex-shrink: 0; // SPでは縮まない
+            // SPでは3点リーダーを解除したい場合はこちら
+            span {
+                overflow: visible;
+                text-overflow: clip;
+            }
     }
 }
+}
+
+
 
 .p-breadcrumbs__list a {
     height: 100%;
-    display: flex;
-    transition: all .3s;
-    font-size: rem(16);
-    line-height: 1;
-    align-items: center;
-    display: flex;           // ブロックレベルにして幅指定を反映
-    overflow: hidden;         // はみ出しを隠す
-    text-overflow: ellipsis;  // 省略記号
-    white-space: nowrap;      // 改行させない
-    max-width: 100%;          // li の幅いっぱいまで
+    line-height: rem(50);
     &:hover {
     opacity: 0.5;
     }
     @include sp {
-        padding-block: 0;
+        display: flex;
+        align-items: center;
         line-height: calc(33 / 16);
-        overflow: visible;   /* はみ出しを隠さない */
-        text-overflow: clip; /* 省略しない */
     }
 }
 
 .p-breadcrumbs__link {
     height: 100%;
-    font-size: rem(16);
-    line-height: 1;
-    align-items: center;
-    display: flex;           // ブロックレベルにして幅指定を反映
-    overflow: hidden;         // はみ出しを隠す
-    text-overflow: ellipsis;  // 省略記号
-    white-space: nowrap;      // 改行させない
-    max-width: 100%;          // li の幅いっぱいまで
-    transition: all .3s;
+    line-height: rem(50);
+    /* リンク同様のホバー処理 */
     &:hover {
-    opacity: 0.5;
-    }
-    @include sp {
-        padding-block: 0;
+        opacity: 0.5;
         line-height: calc(33 / 16);
-        overflow: visible;   /* はみ出しを隠さない */
-        text-overflow: clip; /* 省略しない */
     }
 }
 
-.post-result {
-    font-size: rem(16);
-    line-height: 1;
-    display: block;           // ブロックレベルにして幅指定を反映
-    overflow: hidden;         // はみ出しを隠す
-    text-overflow: ellipsis;  // 省略記号
-    white-space: nowrap;      // 改行させない
-    max-width: 100%;          // li の幅いっぱいまで
-    @include sp {
-        padding-block: 0;
-        line-height: calc(33 / 16);
-        overflow: visible;   /* はみ出しを隠さない */
-        text-overflow: clip; /* 省略しない */
-    }
-}
-
+.post-result,
 .post-blog {
-    font-size: rem(16);
-    line-height: 1;
-    display: block;           // ブロックレベルにして幅指定を反映
-    overflow: hidden;         // はみ出しを隠す
-    text-overflow: ellipsis;  // 省略記号
-    white-space: nowrap;      // 改行させない
-    max-width: 100%;          // li の幅いっぱいまで
+    display: block;
+    height: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     @include sp {
-        padding-block: 0;
         line-height: calc(33 / 16);
-        overflow: visible;   /* はみ出しを隠さない */
-        text-overflow: clip; /* 省略しない */
     }
 }
