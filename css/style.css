@@ -419,10 +419,6 @@ body {
   color: #000;
 }
 
-main {
-  position: relative;
-}
-
 #container {
   width: 100%;
   overflow: hidden;
@@ -632,29 +628,22 @@ img {
 トップへ戻るボタン
 -----------------*/
 .c-back-btn {
-  display: flex;
+  display: grid;
+  place-content: center;
   width: 4.25rem;
   height: 4.25rem;
   background-color: rgba(0, 0, 0, 0.502);
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  right: 7.25rem;
-  z-index: 999;
   cursor: pointer;
-  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* 非表示へ移行するときに .3s 遅延させる */
+  pointer-events: all;
+  transition: all 0.4s ease;
   /* ホバー時のフェード */
 }
-@media (max-width: 767px) {
-  .c-back-btn {
-    right: 1.25rem;
-  }
-}
 .c-back-btn:hover {
-  opacity: 0.7 !important;
+  opacity: 0.7;
 }
 
-.c-back-btn__icon {
+.c-back-btn__img {
   width: 1.6875rem;
 }
 
@@ -678,31 +667,18 @@ img {
 }
 
 .c-btn--contact {
+  display: grid;
+  place-content: center;
   width: 18.75rem;
   height: 3.75rem;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.65;
-  padding-top: 0.375rem;
-  margin-bottom: -0.0625rem;
   letter-spacing: 0.15em;
-  bottom: 28.2rem;
-  right: 0;
-  transition: background-color 0.5s ease;
-}
-.c-btn--contact:hover {
-  color: #cb0000;
-  background-color: #FFF;
 }
 @media (max-width: 767px) {
   .c-btn--contact {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    padding: 0.75rem 6.3125rem 0.75rem 6.125rem;
-    bottom: 19rem;
     width: 20.9375rem;
-    white-space: nowrap;
   }
 }
 
@@ -4240,18 +4216,16 @@ c-side-title
 
 .p-fix-area {
   width: 18.75rem;
-  height: 100%;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 17.125rem;
   right: 0;
   z-index: 1000;
   display: none;
-  pointer-events: none;
 }
 @media (max-width: 767px) {
   .p-fix-area {
     width: 20.9375rem;
-    right: initial;
+    bottom: 18.9375rem;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -4262,15 +4236,12 @@ c-side-title
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 3rem;
-  position: sticky;
-  top: calc(100% - 15.8rem);
+  row-gap: 1.875rem;
 }
 @media (max-width: 767px) {
   .p-fix-area__inner {
-    row-gap: 2rem;
+    row-gap: 1.25rem;
     align-items: flex-end;
-    top: calc(100% - 14.8rem);
   }
 }
 

@@ -1,7 +1,7 @@
 <div class="p-fix-area">
       <div class="p-fix-area__inner">
          <a href="#" class="c-back-btn">
-            <div class="c-back-btn__icon">
+            <div class="c-back-btn__img">
                <img srcset="<?php echo get_template_directory_uri(); ?>/images/top-back-btn.svg">
             </div>
          </a>

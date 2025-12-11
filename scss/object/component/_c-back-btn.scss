@@ -8,43 +8,22 @@
 -----------------*/
 
 .c-back-btn {
-    //   //-----セットで使用し非表示
-    // opacity: 0; 
-    // visibility: hidden;
-    // // --------------------
-    display: flex;
+    display: grid;
+    place-content: center;
     width: rem(68);
     height: rem(68);
     background-color: rgba(0, 0, 0, 0.502);
     border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    right: rem(116);
-    z-index: 999;
     cursor: pointer;
-    transition:
-        opacity .3s ease,        /* フェードの時間 */
-        visibility 0s linear .3s; /* 非表示へ移行するときに .3s 遅延させる */
-    @include sp {
-        right: rem(20);
-    }
+    pointer-events: all;
+    transition: all 0.4s ease;
      /* ホバー時のフェード */
     &:hover {
-     opacity: 0.7 !important;
+     opacity: 0.7;
     }
 }
 
-// .c-back-btn.active {
-//  //-----セットで使用し表示
-//     opacity: 1;
-//     visibility: visible;
-//     transition: 
-//         opacity .3s ease,
-//         transform .3s ease,
-//         visibility 0s linear 0s;
-//  }
-
-.c-back-btn__icon {
+.c-back-btn__img {
     width: rem(27);
 }
 
