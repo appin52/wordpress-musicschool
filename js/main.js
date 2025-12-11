@@ -13,14 +13,41 @@ $(function(){
   });
 
   // -----------------------------------
-  // 問い合わせボタンとトップへ戻るボタンを途中から表示
+  // 問い合わせボタンとトップへ戻るボタンの制御
   // -----------------------------------
   const fixArea = $(".p-fix-area");
+  const footer = $(".l-footer"); // ★フッターのクラス名を指定
+  
+  // 基本の浮く位置（CSSで設定する bottom: 0; などと同じ値にする）
+  const defaultBottom = 0; 
+
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 100) {
+    const scrollPosition = $(this).scrollTop();
+    const windowHeight = $(window).height();
+    const bodyHeight = $(document).height();
+
+    // --- 1. 表示・非表示の切り替え（元のコード） ---
+    if (scrollPosition > 100) {
       fixArea.fadeIn();
     } else {
       fixArea.fadeOut();
+    }
+
+    // --- 2. フッターで止まる処理（今回追加） ---
+    // フッターの開始位置を取得
+    const footerTop = footer.offset().top;
+    
+    // 現在の画面下端の位置
+    const currentBottom = scrollPosition + windowHeight;
+
+    // 画面下端がフッター位置を超えた場合
+    if (currentBottom > footerTop) {
+        // 重なっている分だけ bottom の値を増やす
+        const pushUp = currentBottom - footerTop + defaultBottom;
+        fixArea.css("bottom", pushUp + "px");
+    } else {
+        // フッターより上の時は元の位置に戻す
+        fixArea.css("bottom", defaultBottom + "px");
     }
   });
 
@@ -29,7 +56,6 @@ $(function(){
   // -----------------------------------
   const $footer = $(".l-footer");
   if (window.innerHeight > $footer.offset().top + $footer.outerHeight()) {
-    console.log($footer.offset().top);
     $footer.attr({
       style:
         "position:fixed; width:100%; top:" +

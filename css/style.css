@@ -4225,7 +4225,7 @@ c-side-title
 .p-fix-area {
   width: 18.75rem;
   position: fixed;
-  bottom: 17.125rem;
+  bottom: 0;
   right: 0;
   z-index: 1000;
   display: none;
@@ -4233,7 +4233,7 @@ c-side-title
 @media (max-width: 767px) {
   .p-fix-area {
     width: 20.9375rem;
-    bottom: 18.9375rem;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
   }

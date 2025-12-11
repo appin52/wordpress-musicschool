@@ -9,13 +9,13 @@
 .p-fix-area {
   width: rem(300);
   position: fixed;
-  bottom: rem(274);
+  bottom: 0;
   right: 0;
   z-index: 1000;
   display: none;
   @include sp {
     width: rem(335);
-    bottom: rem(303);
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -26,9 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // row-gap: rem(30);
     @include sp {
-      // row-gap: rem(20);
       align-items: flex-end;
     }
 }

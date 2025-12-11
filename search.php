@@ -11,9 +11,9 @@
                     $total_posts = $wp_query->found_posts;
                     ?>
                 <div class="p-search-list__keyword">
-                    <h2 class="p-search-list__title">
+                    <p class="p-search-list__title">
                         「<span><?php echo get_search_query(); ?></span>」の検索結果
-                    </h2>
+                    </p>
                     <p><?php echo $total_posts ?>件</p>
                 </div>
             <div class="p-search-list__items">
