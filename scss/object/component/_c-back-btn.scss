@@ -8,10 +8,10 @@
 -----------------*/
 
 .c-back-btn {
-      //-----セットで使用し非表示
-    opacity: 0; 
-    visibility: hidden;
-    // --------------------
+    //   //-----セットで使用し非表示
+    // opacity: 0; 
+    // visibility: hidden;
+    // // --------------------
     display: flex;
     width: rem(68);
     height: rem(68);
@@ -34,15 +34,15 @@
     }
 }
 
-.c-back-btn.active {
- //-----セットで使用し表示
-    opacity: 1;
-    visibility: visible;
-    transition: 
-        opacity .3s ease,
-        transform .3s ease,
-        visibility 0s linear 0s;
- }
+// .c-back-btn.active {
+//  //-----セットで使用し表示
+//     opacity: 1;
+//     visibility: visible;
+//     transition: 
+//         opacity .3s ease,
+//         transform .3s ease,
+//         visibility 0s linear 0s;
+//  }
 
 .c-back-btn__icon {
     width: rem(27);

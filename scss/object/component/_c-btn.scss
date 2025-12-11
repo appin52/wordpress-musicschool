@@ -24,10 +24,6 @@
  }
 
  .c-btn--contact {
-	  //-----セットで使用し非表示
-    opacity: 0; 
-    visibility: hidden;
-    // ----------
     width: rem(300);
     height: rem(60);
     font-size: rem(20);
@@ -36,15 +32,10 @@
     padding-top: rem(6);
     margin-bottom: rem(-1);
     letter-spacing: 0.15em;
-    z-index: 999;
-    position: absolute;
     bottom: 28.2rem;
     right: 0;
     transition:
-    background-color 0.5s ease, 
-    color 0.5s ease,
-    opacity 0.3s ease,       /* フェードの時間 */
-    visibility 0s linear 0.3s;  /* 非表示へ移行するときに .3s 遅延させる */
+    background-color 0.5s ease;
     &:hover {
      color: $main-color;
      background-color: $font-color2;
@@ -58,15 +49,4 @@
         width: rem(335);
         white-space: nowrap;
     }
- }
-
- .c-btn--contact.active {
- //-----セットで使用し表示
-    opacity: 1;
-    visibility: visible;
-    transition:
-    background-color 0.5s ease, 
-    color 0.5s ease,
-    opacity 0.3s ease,
-    visibility 0s linear 0s;
  }
