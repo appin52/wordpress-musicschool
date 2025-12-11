@@ -318,7 +318,12 @@
 
 .p-top-voice__inner {
     position: relative;
-    width: 100%;
+    margin: 0 auto;
+    padding-inline: rem(50);
+    max-width: rem(980);
+    @media (max-width: 980px) {
+        max-width: 100%;
+    }
     @include sp {
         padding-inline: rem(20);
         width: 100%;
@@ -334,15 +339,17 @@
 // ==========================================================================
 .p-voice-slider {
     margin-top: rem(36);
-    width: 100%;
+    max-width: rem(880);
     overflow: hidden;
+    @media (max-width: 980px) {
+        max-width: 100%;
+    }
     @include sp {
        margin-top: rem(39);
     }
 }
 
 .p-voice-slider__cards {
-    width: rem(915);
     width: 100%;
     @include sp {
         width: 100%;
@@ -356,6 +363,10 @@
 .p-slider-card {
     width: rem(270);
     margin-right: rem(35);
+    @media (max-width: 980px) {
+        width: 27.55vw; 
+        margin-right: 3.57vw; // 余白も比率で縮小 (35px / 980px)
+    }
     @include sp {
         width: 100%;
         margin-right: 0;
@@ -456,10 +467,7 @@
 
   // 右矢印
   .swiper-button-next {
-    right: rem(-13);
-    @media (max-width: 1000px) {
-        right: rem(20);
-    }
+    right: rem(8);
     @include sp {
       right: rem(20);
     }
@@ -467,10 +475,7 @@
 
   // 左矢印
   .swiper-button-prev {
-    left: rem(-13);
-    @media (max-width: 1000px) {
-        left: rem(20);
-    }
+    left: rem(8);
     @include sp {
       left: rem(20);
     }

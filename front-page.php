@@ -118,7 +118,7 @@
 
         <!-- voice -->
         <section class="p-top__voice p-top-voice">
-        <div class="p-top-voice__inner l-inner">
+        <div class="p-top-voice__inner">
             <h2 class="p-top-voice__title c-title">
             生徒さんたちの声
             </h2>
