@@ -117,15 +117,12 @@
             <?php else : ?>
                 <div class="l-header__logo">
              <?php endif; ?>
-
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="p-header__logo p-header-logo">
-                <div class="p-header-logo__image">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo-red.svg' ); ?>" alt="きたむらミュージックスクール">
-                </div>
-            <span class="p-header-logo__text">
-            きたむら<br class="u-pc"><span>ミュージックスクール</span>
-            </span>
-        </a>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="p-header__logo p-header-logo">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo-red.svg' ); ?>" alt="">
+                    <span class="p-header-logo__text">
+                        きたむら<br class="u-pc"><span>ミュージックスクール</span>
+                    </span>
+                </a>
 
         <?php if ( is_front_page() || is_search() ) : ?>
         </h1>

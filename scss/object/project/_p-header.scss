@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     column-gap: rem(10);
-    transition: 0.3s ease;
+    transition: 0.4s ease;
     &:hover {
         opacity: 0.7;
     }
@@ -62,16 +62,12 @@
     }
 }
 
-.p-header-logo__image {
+.p-header-logo img {
     width: rem(32);
+    display: block;
     @include sp {
         width: rem(21);
     }
-}
-
-.p-header-logo__image img {
-    display: block;
-    width: 100%;
 }
 
 
@@ -131,6 +127,12 @@
         display: block;
         height: rem(58);
     }
+    &:last-child {
+      margin-left: rem(10);
+      @include sp {
+        margin-left: 0;
+      }
+    }
 }
 
 .p-header-nav__lists a {
@@ -188,7 +190,6 @@
     justify-content: center;
     font-size: rem(15);
     width: rem(150);
-    margin-left: rem(10);
     color: $font-color2; 
     background-color: $main-color;
     border: $main-color solid;
