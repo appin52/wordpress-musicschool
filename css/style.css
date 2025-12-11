@@ -632,6 +632,7 @@ img {
   place-content: center;
   width: 4.25rem;
   height: 4.25rem;
+  margin-bottom: 1.875rem;
   background-color: rgba(0, 0, 0, 0.502);
   border-radius: 50%;
   cursor: pointer;
@@ -4236,11 +4237,9 @@ c-side-title
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1.875rem;
 }
 @media (max-width: 767px) {
   .p-fix-area__inner {
-    row-gap: 1.25rem;
     align-items: flex-end;
   }
 }

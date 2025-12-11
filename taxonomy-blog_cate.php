@@ -61,6 +61,6 @@
             </div>
         </div>
         </section>
-    <?php get_template_part('template-parts/fix-area'); ?>
     </main>
+<?php get_template_part('template-parts/fix-area'); ?>
 <?php get_footer(); ?> 
