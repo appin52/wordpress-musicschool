@@ -16,7 +16,7 @@
                     </p>
                     <p><?php echo $total_posts ?>件</p>
                 </div>
-            <div class="p-search-list__items">
+                <div class="p-search-list__items">
                 <?php
                 while (have_posts()):
                 the_post();
@@ -52,7 +52,7 @@
                 <?php
                 endwhile;
                 ?>
-            </div>
+                </div>
             <!-- ページネーション -->
              <div class="c-pager">
                 <?php wp_pagenavi(); ?>
@@ -63,15 +63,15 @@
                 <a onclick="history.back()" class="p-search-result__btn c-btn">戻る</a>
             </div>
             <?php endif; ?>
-        <?php else: ?>
+
+            <?php else: ?>
             <div class="p-search-result__no-result">
             <p>検索キーワードが未入力です。</p>
             <a onclick="history.back()" class="p-search-result__btn c-btn">戻る</a>
             </div>
-        <?php endif; ?>
+            <?php endif; ?>
         </div>
-        </div>
-        </section>
+        </section> 
     </main>
- <?php get_template_part('template-parts/fix-area'); ?>
- <?php get_footer(); ?> 
+<?php get_template_part('template-parts/fix-area'); ?>
+<?php get_footer(); ?> 
