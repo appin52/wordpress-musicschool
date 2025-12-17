@@ -118,7 +118,9 @@
                 <div class="l-header__logo">
              <?php endif; ?>
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="p-header__logo p-header-logo">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo-red.svg' ); ?>" alt="">
+                    <span class="p-header-logo__img">
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/logo-red.svg' ); ?>" alt="">
+                    </span>
                     <span class="p-header-logo__text">
                         きたむら<br class="u-pc"><span>ミュージックスクール</span>
                     </span>

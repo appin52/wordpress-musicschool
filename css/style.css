@@ -1781,12 +1781,12 @@ c-side-title
   }
 }
 
-.p-header-logo img {
+.p-header-logo__img {
   width: 2rem;
   display: block;
 }
 @media (max-width: 767px) {
-  .p-header-logo img {
+  .p-header-logo__img {
     width: 1.3125rem;
   }
 }
