@@ -2187,6 +2187,7 @@ c-side-title
 .p-breadcrumbs__list a {
   height: 100%;
   line-height: 3.125rem;
+  transition: all 0.3s;
 }
 .p-breadcrumbs__list a:hover {
   opacity: 0.5;
@@ -2202,7 +2203,7 @@ c-side-title
 .p-breadcrumbs__link {
   height: 100%;
   line-height: 3.125rem;
-  /* リンク同様のホバー処理 */
+  transition: all 0.3s;
 }
 .p-breadcrumbs__link:hover {
   opacity: 0.5;

@@ -82,6 +82,7 @@
 .p-breadcrumbs__list a {
     height: 100%;
     line-height: rem(50);
+    transition: all .3s;
     &:hover {
     opacity: 0.5;
     }
@@ -95,7 +96,7 @@
 .p-breadcrumbs__link {
     height: 100%;
     line-height: rem(50);
-    /* リンク同様のホバー処理 */
+    transition: all .3s;
     &:hover {
         opacity: 0.5;
         line-height: calc(33 / 16);

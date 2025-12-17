@@ -20,7 +20,7 @@
                     お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。
                 </p>
                 <div class="p-404__btnarea">
-                <a href="index.html" class="p-404__btn c-btn">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="p-404__btn c-btn">
                     ホームへ戻る
                 </a>
                 </div>
