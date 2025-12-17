@@ -16,6 +16,7 @@
   @include sp {
     width: rem(335);
     bottom: 0;
+    right: initial;
     left: 50%;
     transform: translateX(-50%);
   }

@@ -417,6 +417,7 @@ body {
   font-style: normal;
   text-decoration: none;
   color: #000;
+  position: relative;
 }
 
 #container {
@@ -4237,6 +4238,7 @@ c-side-title
   .p-fix-area {
     width: 20.9375rem;
     bottom: 0;
+    right: initial;
     left: 50%;
     transform: translateX(-50%);
   }
