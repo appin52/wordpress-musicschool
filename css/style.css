@@ -413,6 +413,7 @@ html {
 body {
   margin: 0;
   font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
+  font-size: 1rem;
   font-weight: 500;
   font-style: normal;
   text-decoration: none;
