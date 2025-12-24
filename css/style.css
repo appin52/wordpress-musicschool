@@ -3329,7 +3329,7 @@ c-side-title
 
 @media (max-width: 767px) {
   .grecaptcha-badge {
-    bottom: 110px !important;
+    bottom: 6.875rem !important;
   }
 }
 

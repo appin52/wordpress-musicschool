@@ -263,6 +263,6 @@ label {
 // ==========================================================================
 .grecaptcha-badge {
   @include sp {
-    bottom: 110px !important;
+    bottom: rem(110) !important;
   }
 }
