@@ -150,3 +150,14 @@ function add_file_types_to_uploads($file_types){
   return array_merge($file_types, $new_filetypes);
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+
+// --------------------------------------------------
+// お問い合わせページを除き、「reCAPTCHA」を読み込ませない
+// --------------------------------------------------
+function load_recaptcha_js() {
+ if ( ! is_page( 'contact' ) ) {
+  wp_deregister_script( 'google-recaptcha' );
+ }
+}
+add_action( 'wp_enqueue_scripts', 'load_recaptcha_js',100 );
