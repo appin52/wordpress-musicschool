@@ -257,3 +257,12 @@ label {
 .wpcf7-form-control-wrap.is-show .wpcf7-not-valid-tip {
 	display: block;
 }
+
+// ==========================================================================
+// grecaptcha-badge
+// ==========================================================================
+.grecaptcha-badge {
+  @include sp {
+    bottom: 110px !important;
+  }
+}

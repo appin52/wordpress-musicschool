@@ -3327,6 +3327,12 @@ c-side-title
   display: block;
 }
 
+@media (max-width: 767px) {
+  .grecaptcha-badge {
+    bottom: 110px !important;
+  }
+}
+
 .p-contact-send__area {
   padding-block: 4.25rem 5.625rem;
 }
