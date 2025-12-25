@@ -6,7 +6,7 @@
             </div>
          </a>
          <?php if ( !is_page('contact') ) : ?>
-            <a href="<?php echo esc_url(home_url('contact')); ?>" class="c-btn c-btn--contact">
+            <a href="<?php echo esc_url(home_url('contact')); ?>" class="c-btn c-btn--contact" alt="">
                お問い合わせ
             </a>
          <?php endif; ?>
