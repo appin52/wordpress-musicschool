@@ -105,7 +105,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: rem(21);
+    row-gap: rem(20);
+    @include sp {
+      row-gap: rem(22);
+    }
 }
 label {
     cursor: pointer;
@@ -117,9 +120,10 @@ label {
         display: inline-block;
         padding-left: rem(40);
         position: relative;
-        
+        font-size: rem(18);
         @include sp {
           padding-left: rem(30);
+          font-size: rem(16);
         }
               
         &::before {
@@ -179,10 +183,7 @@ label {
 .p-form__submit {
     display: flex;
     justify-content: center;
-    margin-top: rem(20);
-    @include sp {
-      margin-top: rem(37);
-    }
+    margin-top: rem(50);
 }
 
 .p-form__btn {
@@ -258,11 +259,4 @@ label {
 	display: block;
 }
 
-// ==========================================================================
-// grecaptcha-badge
-// ==========================================================================
-.grecaptcha-badge {
-  @include sp {
-    bottom: rem(110) !important;
-  }
-}
+
