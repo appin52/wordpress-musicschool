@@ -1037,12 +1037,12 @@ c-side-title
 .p-flow-card:first-of-type .p-flow-card__circle::before {
   content: "";
   position: absolute;
-  width: 1.875rem;
-  height: 0.9375rem;
+  width: 2.375rem;
+  height: 1.25rem;
   background-image: url("../images/top/arrowhead.svg");
   background-size: contain; /* サイズに合わせてSVGを調整 */
   background-repeat: no-repeat;
-  top: -220%;
+  top: -218%;
   left: 59%;
   transform: translateX(-50%);
 }
@@ -1405,8 +1405,8 @@ c-side-title
   content: "";
   left: 2.5rem;
   bottom: -0.3125rem;
-  width: 2.1875rem;
-  height: 1.125rem;
+  width: 2.375rem;
+  height: 1.25rem;
   background-image: url("../images/top/arrowhead.svg");
   background-size: contain; /* サイズに合わせてSVGを調整 */
   background-repeat: no-repeat;
