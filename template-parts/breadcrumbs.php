@@ -1,7 +1,7 @@
  <div class="p-breadcrumbs">
     <div class="l-inner">
         <nav class="p-breadcrumbs__list">
-            <ul>
+            <div class="p-breadcrumbs__inner">
                 <?php if (function_exists('bcn_display')) {
                   bcn_display();
                 } ?> 

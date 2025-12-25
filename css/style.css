@@ -2136,7 +2136,7 @@ c-side-title
   }
 }
 
-.p-breadcrumbs__list ul {
+.p-breadcrumbs__inner {
   width: 100%;
   max-width: 55rem;
   display: flex;
@@ -2149,7 +2149,7 @@ c-side-title
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .p-breadcrumbs__list ul {
+  .p-breadcrumbs__inner {
     width: auto;
     max-width: none;
     display: inline-flex;
