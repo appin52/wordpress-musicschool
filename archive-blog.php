@@ -46,8 +46,8 @@
                                 ?>
                             </div>
                             <div class="p-list-item__textarea">
-                                <h3 class="p-list-item__title js-ellipsis25">
-                                    <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
+                                <h3 class="p-list-item__title">
+                                    <?php echo wp_trim_words(get_the_title(), 50, '...'); ?>
                                 </h3>
                                 <time datetime="<?php the_time('Y-m-d'); ?>" class="p-list-item__time">
                                     <?php the_time('Y.m.d'); ?>

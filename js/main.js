@@ -65,28 +65,6 @@ $(function(){
   }
 
   // -----------------------------------
-  // テキスト省略（25文字）
-  // -----------------------------------
-  const LIMIT25 = 25;
-  $('.js-ellipsis25').each(function(){
-    const txt = $(this).text().trim();
-    if (txt.length > LIMIT25) {
-      $(this).text(txt.substr(0, LIMIT25) + '…');
-    }
-  });
-
-  // -----------------------------------
-  // テキスト省略（15文字）
-  // -----------------------------------
-  const LIMIT15 = 15;
-  $('.js-ellipsis15').each(function(){
-    const txt = $(this).text().trim();
-    if (txt.length > LIMIT15) {
-      $(this).text(txt.substr(0, LIMIT15) + '…');
-    }
-  });
-
-  // -----------------------------------
  // フォームバリデーションメッセージ表示
  // -----------------------------------
  $(".wpcf7-submit").click(function () {

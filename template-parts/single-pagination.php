@@ -3,7 +3,7 @@
                     $next_post = get_next_post();
                     ?>
                     
-                    <div class="p-blog-details__pagination p-pagination">
+                    <div class="p-pagination">
                     <?php if (!empty($prev_post)): ?>
                     <a href="<?php echo get_permalink($prev_post->ID); ?>">
                         <div class="p-pagination__article">
@@ -18,8 +18,8 @@
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="No Image">
                                     <?php endif; ?>
                                 </div>
-                                <p class="p-pagination__title js-ellipsis25">
-                                    <?php echo wp_trim_words($prev_post->post_title, 25, '...'); ?>
+                                <p class="p-pagination__title">
+                                    <?php echo wp_trim_words($prev_post->post_title, 50, '...'); ?>
                                 </p>
                             </div>
                         </div>
@@ -40,8 +40,8 @@
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" alt="No Image">
                                     <?php endif; ?>
                                 </div>
-                                <p class="p-pagination__title js-ellipsis25">
-                                    <?php echo wp_trim_words($next_post->post_title, 25, '...'); ?>
+                                <p class="p-pagination__title">
+                                    <?php echo wp_trim_words($next_post->post_title, 50, '...'); ?>
                                 </p>
                             </div>
                         </div>

@@ -150,10 +150,16 @@
     }
 }
 
-.p-side-recommend__title {
+.p-side-recommend__textarea h3 {
     font-size: rem(17);
     line-height: calc(28 / 17);
+    // 2行以上は省略
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
+
 
 // ==========================================================================
 // p-side-category

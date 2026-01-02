@@ -46,9 +46,7 @@
                                 <?php endif; ?>
                             </div>
                             <div class="p-side-recommend__textarea">
-                                <div class="p-side-recommend__title js-ellipsis15">
-                                    <h3><?php echo wp_trim_words(get_the_title(), 15, '...'); ?></h3>
-                                </div>
+                                    <h3><?php echo wp_trim_words(get_the_title(), 30, '...'); ?></h3>
                             </div>
                         </a>
                         <?php

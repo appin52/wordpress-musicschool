@@ -67,7 +67,7 @@ if ( ! empty($terms) && ! is_wp_error($terms) ) :
             </div>
             <div class="p-related__textarea">
               <h3 class="p-related__title">
-                <?php echo esc_html( wp_trim_words( get_the_title(), 32, '...' ) ); ?>
+                <?php echo esc_html( wp_trim_words( get_the_title(), 50, '...' ) ); ?>
               </h3>
               <time class="p-related__time" datetime="<?php echo esc_attr( get_the_date('Y-m-d') ); ?>">
                 <?php echo esc_html( get_the_date('Y.m.d') ); ?>
