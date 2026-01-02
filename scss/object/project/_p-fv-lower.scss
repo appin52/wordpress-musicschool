@@ -7,13 +7,9 @@
 // ==========================================================================
 
 .p-fv-lower {
-    margin-top: rem(80);
     width: 100%;
     position: relative;
     overflow: hidden;
-    @include sp {
-        margin-top: rem(50);
-    }
 }
 
 .p-fv-lower__bg {

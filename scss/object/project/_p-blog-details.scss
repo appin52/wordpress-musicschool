@@ -6,13 +6,6 @@
 // p-blog-details
 // ==========================================================================
 
-.p-blog-details {
-    margin-top: rem(80);
-    @include sp {
-        margin-top: rem(50);
-    }
-}
-
 .p-blog-details__imgarea {
     position: relative;
 }

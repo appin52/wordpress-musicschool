@@ -50,6 +50,13 @@ html {
     width: 100%;
     overflow: hidden;
   }
+
+  main {
+    margin-top: rem(80);
+    @include sp {
+      margin-top: rem(50);
+    }
+  }
   
   p, h1, h2, h3, a {
     margin: 0;
