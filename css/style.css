@@ -1129,6 +1129,7 @@ c-side-title
 @media (max-width: 767px) {
   .p-reason-card__body {
     width: 100%;
+    margin-top: 1.875rem;
   }
 }
 
@@ -1143,7 +1144,6 @@ c-side-title
 @media (max-width: 767px) {
   .p-reason-card__title {
     padding-left: 0;
-    padding-top: 1.875rem;
     padding-bottom: 0.5rem;
     font-size: 1.25rem;
     line-height: 1.5;
