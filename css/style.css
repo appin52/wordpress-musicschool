@@ -927,12 +927,12 @@ c-side-title
 }
 
 .p-top-concept {
-  padding-block: 4.125rem 2.9375rem;
+  padding-block: 4.125rem 3.5625rem;
   background-color: #FFF;
 }
 @media (max-width: 767px) {
   .p-top-concept {
-    padding-block: 2.875rem 1.75rem;
+    padding-block: 2.875rem 2.3125rem;
   }
 }
 
@@ -960,6 +960,7 @@ c-side-title
   .p-top-concept__message {
     font-size: 1.125rem;
     margin-block: 0.4375rem 1.25rem;
+    text-align: left;
   }
 }
 
@@ -975,26 +976,21 @@ c-side-title
 
 .p-concept-flow {
   width: 100%;
-  margin-top: 0.75rem;
+  margin-top: 1.25rem;
 }
 @media (max-width: 767px) {
   .p-concept-flow {
-    margin-top: 1.5625rem;
+    margin-top: 2.0625rem;
     padding-right: 0.3125rem;
   }
 }
 
 .p-flow-card {
   width: 100%;
-  padding-block: 0.54375rem;
+  margin-top: 1.0625rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media (max-width: 767px) {
-  .p-flow-card {
-    padding-block: 0.53125rem;
-  }
 }
 
 .p-flow-card__en {
@@ -1044,7 +1040,7 @@ c-side-title
   background-image: url("../images/top/arrowhead.svg");
   background-size: contain; /* サイズに合わせてSVGを調整 */
   background-repeat: no-repeat;
-  top: -218%;
+  top: -215%;
   left: 59%;
   transform: translateX(-50%);
 }
@@ -1902,6 +1898,7 @@ c-side-title
     font-size: 1.125rem;
     line-height: 1.8333333333;
     color: #FFF;
+    transition: all 0.3s;
   }
   .p-header-nav__lists a::after {
     display: none;

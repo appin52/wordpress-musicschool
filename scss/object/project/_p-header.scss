@@ -174,6 +174,7 @@
         font-size: rem(18);
         line-height: calc(33 / 18);
         color: $font-color2;
+        transition: all .3s;
 
         // SPでは下線を非表示にするか、幅のアニメーションを無効化
         &::after {
