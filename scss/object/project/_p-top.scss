@@ -345,9 +345,6 @@
 
 .p-voice-slider__cards {
     width: 100%;
-    @include sp {
-        width: 100%;
-    }
 }
 
 // ==========================================================================
@@ -358,8 +355,8 @@
     width: rem(270);
     margin-right: rem(35);
     @media (max-width: 980px) {
-        width: 27.55vw; 
-        margin-right: 3.57vw; // 余白も比率で縮小 (35px / 980px)
+        width: 30.68%; 
+        margin-right: 3.97%;
     }
     @include sp {
         width: 100%;
@@ -418,6 +415,11 @@
     letter-spacing: -0.05em;
     color: $font-color2;
     transition: 0.3s ease;
+    // ３行以上は省略
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
     @include sp {
         letter-spacing: 0;
     }

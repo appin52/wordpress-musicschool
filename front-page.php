@@ -147,7 +147,7 @@
                     <h3><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
                     </div>
                     <div class="p-slider-card__comment">
-                    <p><?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
+                    <p><?php echo wp_trim_words(get_the_content(), 60, '...'); ?></p>
                     </div>
                 </a>
                 </div>
