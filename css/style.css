@@ -2555,7 +2555,6 @@ c-side-title
   font-size: 1.25rem;
   line-height: 1.25;
   font-weight: 600;
-  margin-bottom: 0.1875rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -2570,6 +2569,7 @@ c-side-title
 .p-list-item__time {
   font-size: 1.0625rem;
   line-height: 1.7647058824;
+  margin-top: 0.1875rem;
 }
 @media (max-width: 767px) {
   .p-list-item__time {
