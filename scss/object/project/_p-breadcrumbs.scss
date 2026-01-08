@@ -82,7 +82,7 @@
 .p-breadcrumbs__list a {
     height: 100%;
     line-height: rem(50);
-    transition: all .3s;
+    transition: opacity 0.3s ease;
     &:hover {
     opacity: 0.5;
     }

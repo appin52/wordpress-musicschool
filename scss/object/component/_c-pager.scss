@@ -29,7 +29,7 @@ c-pager
       border: rem(1) solid $font-color1;
       display: grid;
       place-content: center;
-      transition: all 0.4s;
+      transition: opacity 0.4s ease, color 0.4s ease, background-color 0.4s ease;
       @include sp {
         width: rem(44);
         height: rem(44);
@@ -38,7 +38,7 @@ c-pager
       &:hover {
         opacity: 1;
         color: #fff;
-        background: #000;
+        background-color: #000;
       }
     }
     .current {

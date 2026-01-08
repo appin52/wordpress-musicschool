@@ -113,7 +113,7 @@
         background-color: $main-color;
         position: fixed;
         right: -120%;
-        transition: all .3s;
+        transition: right 0.3s;
     }
 }
 .p-header-nav__lists.active {
@@ -156,7 +156,7 @@
         width: 0; // 通常時は幅0
         height: 2px; // 下線の太さ
         background-color: $font-color1; // 下線の色
-        transition: width 0.3s ease-out; // アニメーション
+        transition: width .3s ease-out; // アニメーション
     }
 
     &:hover {
@@ -174,7 +174,7 @@
         font-size: rem(18);
         line-height: calc(33 / 18);
         color: $font-color2;
-        transition: all .3s;
+        transition: background-color 0.3s;
 
         // SPでは下線を非表示にするか、幅のアニメーションを無効化
         &::after {
@@ -196,10 +196,9 @@
     border: $main-color solid;
     font-weight: 600;
     display: flex;
-    justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: color 0.4s ease, background-color 0.4s ease;;
     &::after {
     display: none; // SPでは下線を完全に非表示
      }
@@ -237,14 +236,6 @@
   li {
     &:last-child {
       height: rem(45);
-      justify-content: center;
-      align-items: center;
-      a {
-        color: #fff;
-        &:hover {
-            color: $main-color;
-        }
-      }
     }
   }
 }

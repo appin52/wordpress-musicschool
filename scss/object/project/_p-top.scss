@@ -395,7 +395,7 @@
     font-weight: 600;
     text-align: center;
     color: $font-color2;
-    transition: 0.3s ease;
+    transition: opacity .3s ease;
     @include sp {
         padding-top: rem(27);
     }
@@ -414,7 +414,7 @@
     font-weight: 500;
     letter-spacing: -0.05em;
     color: $font-color2;
-    transition: 0.3s ease;
+    transition: opacity .3s ease;
     // ３行以上は省略
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -640,7 +640,7 @@
     transform-origin: center;
     /* 鋭角に見せるために横幅を縮める */
     scale: 0.8 1.1;
-    transition: transform 0.4s ease;
+    transition: transform .4s ease;
     @include sp {
     right: rem(15);
     top: 50%;
@@ -758,7 +758,7 @@
     font-size: rem(18);
     line-height: calc(18 / 18);
     border-bottom: 0.05rem solid;
-    transition: all .3s;
+    transition: opacity .3s;
     cursor: pointer;
     &:hover {
     opacity: 0.7;
@@ -775,9 +775,8 @@
     flex-direction: column;
     width: 100%;
     min-width: 0;
-    transition: 0.3s;
     position: relative;
-    transition: all .4s;
+    transition: opacity .4s;
     &:hover {
         opacity: 0.7;
     }

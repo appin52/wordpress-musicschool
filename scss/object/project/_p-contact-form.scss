@@ -200,7 +200,7 @@ label {
     align-items: center;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     &:hover {
      color: $main-color;
      background-color: $font-color2;

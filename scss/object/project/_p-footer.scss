@@ -20,7 +20,7 @@
     width: rem(52);
     padding: rem(10);
     cursor: pointer;
-    transition: all .3s;
+    transition: opacity .3s;
     @include sp {
         margin-top: rem(9);
     }
@@ -55,7 +55,7 @@
 .p-footer__snsbtn a {
     display: block;
     padding: rem(6);
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
     cursor: pointer;
     @include sp {
         padding: rem(6);
@@ -87,7 +87,7 @@
    line-height: calc(33 / 17);
    font-weight: 600; 
    padding: rem(10);
-   transition: all 0.3s ease;
+   transition: opacity 0.3s ease;
    cursor: pointer;
    &:hover {
     opacity: 0.7;

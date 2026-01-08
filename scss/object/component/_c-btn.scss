@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: color 0.4s ease, background-color 0.4s ease;
     &:hover {
      color: $main-color;
      background-color: $font-color2;

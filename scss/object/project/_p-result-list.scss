@@ -26,7 +26,6 @@
 }
 
 .p-result-section__item {
-    // width: rem(387);
     width: 100%;
     min-width: 0;
     display: flex;
@@ -39,7 +38,7 @@
 .p-result-section__item a {
     position: relative;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     flex: 1;
