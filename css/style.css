@@ -1249,10 +1249,10 @@ c-side-title
 
 .p-slider-card__img img {
   width: 100%;
-  transition: transform 0.3s ease;
   aspect-ratio: 270/190;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.3s ease;
 }
 @media (max-width: 767px) {
   .p-slider-card__img img {
@@ -1896,7 +1896,7 @@ c-side-title
     font-size: 1.125rem;
     line-height: 1.8333333333;
     color: #FFF;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
   }
   .p-header-nav__lists a::after {
     display: none;
@@ -2557,6 +2557,7 @@ c-side-title
 }
 
 .p-list-item__time {
+  display: block;
   font-size: 1.0625rem;
   line-height: 1.7647058824;
   margin-top: 0.1875rem;

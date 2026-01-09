@@ -85,6 +85,7 @@
 }
 
 .p-list-item__time {
+    display: block;
     font-size: rem(17);
     line-height: calc(30 / 17);
     margin-top: rem(3);

@@ -156,7 +156,7 @@
         width: 0; // 通常時は幅0
         height: 2px; // 下線の太さ
         background-color: $font-color1; // 下線の色
-        transition: width .3s ease-out; // アニメーション
+        transition: width 0.3s ease-out; // アニメーション
     }
 
     &:hover {
@@ -174,7 +174,7 @@
         font-size: rem(18);
         line-height: calc(33 / 18);
         color: $font-color2;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s ease;
 
         // SPでは下線を非表示にするか、幅のアニメーションを無効化
         &::after {

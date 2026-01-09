@@ -380,9 +380,9 @@
 
 .p-slider-card__img img {
     width: 100%;
-    transition: transform 0.3s ease;
     aspect-ratio: 270 / 190;
     object-fit: cover;
+    transition: transform 0.3s ease;
     @include sp {
         aspect-ratio: 335 / 200;
     }
@@ -395,7 +395,7 @@
     font-weight: 600;
     text-align: center;
     color: $font-color2;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
     @include sp {
         padding-top: rem(27);
     }
@@ -414,7 +414,7 @@
     font-weight: 500;
     letter-spacing: -0.05em;
     color: $font-color2;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
     // ３行以上は省略
     display: -webkit-box;
     -webkit-box-orient: vertical;
