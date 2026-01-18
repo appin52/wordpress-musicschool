@@ -21,7 +21,7 @@
                 $term = get_queried_object();
                 $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
                 ?>
-                <h2 class="p-result-section__title c-title2">
+                <h2 class="c-title2">
                     <?php echo esc_html($term_name); ?>
                 </h2>
 

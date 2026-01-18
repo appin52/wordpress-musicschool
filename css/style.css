@@ -975,6 +975,9 @@ c-side-title
 }
 
 .p-concept-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0625rem;
   width: 100%;
   margin-top: 1.25rem;
 }
@@ -987,7 +990,6 @@ c-side-title
 
 .p-flow-card {
   width: 100%;
-  margin-top: 1.0625rem;
   display: flex;
   align-items: center;
   justify-content: center;
