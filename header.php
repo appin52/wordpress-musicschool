@@ -90,9 +90,6 @@
     <title><?php echo get_the_title(); ?> | きたむらミュージックスクール</title>
     <meta name="description" content="きたむらミュージックスクール公式ホームページの<?php echo get_the_title(); ?>ページです。">
   <?php endif; ?>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon180x180.png">
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon.svg">
     <meta property="og:title" content="きたむらミュージックスクール">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://rina-suzuki.com/musicschool/images/ogp.jpg">
