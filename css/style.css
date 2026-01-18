@@ -418,6 +418,7 @@ body {
   text-decoration: none;
   color: #000;
   position: relative;
+  letter-spacing: 0;
 }
 
 #container {
@@ -669,7 +670,7 @@ img {
 .c-btn {
   color: #FFF;
   background-color: #cb0000;
-  border: #cb0000 solid;
+  border: 1px #cb0000 solid;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -1772,7 +1773,7 @@ c-side-title
   align-items: center;
   -moz-column-gap: 0.625rem;
        column-gap: 0.625rem;
-  transition: 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 .p-header-logo:hover {
   opacity: 0.7;
@@ -1914,7 +1915,7 @@ c-side-title
   width: 9.375rem;
   color: #FFF;
   background-color: #cb0000;
-  border: #cb0000 solid;
+  border: 1px #cb0000 solid;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -1961,7 +1962,7 @@ c-side-title
   width: 3.25rem;
   padding: 0.625rem;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s ease;
 }
 @media (max-width: 767px) {
   .p-footer__logo {
@@ -2002,7 +2003,7 @@ c-side-title
 .p-footer__snsbtn a {
   display: block;
   padding: 0.375rem;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
   cursor: pointer;
 }
 @media (max-width: 767px) {
@@ -2036,7 +2037,7 @@ c-side-title
   line-height: 1.9411764706;
   font-weight: 600;
   padding: 0.625rem;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
   cursor: pointer;
 }
 .p-footer-nav__lists a:hover {
@@ -3128,11 +3129,12 @@ c-side-title
   min-height: 18.75rem;
   height: 18.75rem;
   overflow-y: auto;
-  resize: vertical;
+  resize: none;
   padding: 0.8125rem 1.25rem;
   font-size: 0.9375rem;
   line-height: 2.2;
   border: solid 0.03125rem #000;
+  overflow-wrap: break-word;
 }
 @media (max-width: 767px) {
   .p-form__textarea {
@@ -3155,14 +3157,14 @@ c-side-title
   line-height: 1.32;
   color: #FFF;
   background-color: #cb0000;
-  border: #cb0000 solid;
+  border: 1px #cb0000 solid;
   font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   cursor: pointer;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.4s ease, background-color 0.4s ease;
 }
 .p-form__btn:hover {
   color: #cb0000;

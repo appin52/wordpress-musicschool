@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     column-gap: rem(10);
-    transition: 0.4s ease;
+    transition:opacity 0.4s ease;
     &:hover {
         opacity: 0.7;
     }
@@ -193,7 +193,7 @@
     width: rem(150);
     color: $font-color2; 
     background-color: $main-color;
-    border: $main-color solid;
+    border:1px $main-color solid;
     font-weight: 600;
     display: flex;
     align-items: center;
